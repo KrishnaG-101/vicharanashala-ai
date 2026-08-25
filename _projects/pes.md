@@ -1,10 +1,18 @@
 ---
-layout: page
+layout: default
 title: PES
 parent: Products
 order: 4
 permalink: /projects/pes/
 ---
+
+<div class="initiative-page-hero product-page-hero">
+  <a href="{{ site.baseurl }}/products/" class="initiative-back"><i class="ph ph-arrow-left"></i> Products</a>
+  <p class="story-label"><i class="ph ph-scales"></i> Products</p>
+  <h1 class="initiative-page-h">PES</h1>
+</div>
+
+{% include page-quote.html %}
 
 <div class="product-page-meta">
   <span class="product-page-status">In Development</span>

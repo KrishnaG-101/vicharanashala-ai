@@ -1,11 +1,20 @@
 ---
-layout: page
+layout: default
 title: Samagama + Yaksha
 page_title: Samagama + Yaksha - Internship Management at National Scale
 parent: Products
 order: 2
 permalink: /projects/samagama/
 ---
+
+<div class="initiative-page-hero product-page-hero">
+  <a href="{{ site.baseurl }}/products/" class="initiative-back"><i class="ph ph-arrow-left"></i> Products</a>
+  <p class="story-label"><i class="ph ph-door-open"></i> Products</p>
+  <h1 class="initiative-page-h">Samagama + Yaksha</h1>
+</div>
+
+{% include page-quote.html %}
+
 
 *What 20–30 coordinators would do — run by four people and one AI.*
 

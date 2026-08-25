@@ -79,27 +79,51 @@ $on-laptop:     860px !default;
 }
 
 .header-logo-iit {
-  height: 28px;
+  height: 68px;
   width: auto;
   display: block;
 }
 
-.header-logo-vled-pill {
-  background: #1a1a1a;
-  border-radius: 6px;
-  padding: 3px 8px;
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none !important;
 }
 
-.header-logo-vled {
-  height: 20px;
+.header-brand-icon {
+  height: 68px;
   width: auto;
   display: block;
-  mix-blend-mode: lighten;
+  flex-shrink: 0;
+}
+
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+
+.header-brand-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.09em;
+  color: $text-color;
+}
+
+.header-brand-tagline {
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+  color: $grey-color;
+  margin-top: 2px;
 }
 
 @include media-query($on-palm) {
-  .header-logo-iit { height: 22px; }
-  .header-logo-vled { height: 16px; }
+  .header-logo-iit { height: 52px; }
+  .header-brand-icon { height: 52px; }
+  .header-brand-name { font-size: 0.75rem; }
+  .header-brand-tagline { font-size: 0.55rem; }
 }
 
 .site-title {
@@ -1639,7 +1663,6 @@ table {
 // Initiative individual page header
 .initiative-page-hero {
   padding: 2.5rem 0 2rem;
-  border-bottom: 1px solid #e2e2de;
   margin-bottom: 2rem;
 }
 .initiative-back {
@@ -1654,6 +1677,11 @@ table {
   margin-bottom: 1.2rem;
 }
 .initiative-back:hover { color: #1a1a1a; text-decoration: none; }
+.product-page-hero {
+  padding: 2.2rem 0 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.product-page-hero .initiative-back { margin-bottom: 0.7rem; }
 .initiative-page-h {
   font-size: 2rem;
   font-weight: 700;
@@ -2322,7 +2350,7 @@ table {
   border-top: 1px solid $grey-color-light;
 }
 .footer-iit-logo {
-  height: 44px;
+  height: 76px;
   width: auto;
 }
 .footer-affil-text {

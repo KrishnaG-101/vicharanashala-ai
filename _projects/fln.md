@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: FLN
 page_title: FLN — Building Strong Foundations in Literacy & Numeracy
 parent: Products
@@ -8,6 +8,13 @@ permalink: /projects/fln/
 ---
 
 <div class="fln-project">
+<div class="initiative-page-hero product-page-hero">
+  <a href="{{ site.baseurl }}/products/" class="initiative-back"><i class="ph ph-arrow-left"></i> Products</a>
+  <p class="story-label"><i class="ph ph-book-open"></i> Products</p>
+  <h1 class="initiative-page-h">FLN</h1>
+</div>
+
+{% include page-quote.html %}
 
 <!-- ═══════════ HERO ═══════════ -->
 <section class="fln-hero fln-section fln-section--first">

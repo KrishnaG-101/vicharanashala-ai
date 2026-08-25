@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Spandan
 parent: Products
 order: 2
@@ -7,6 +7,14 @@ permalink: /projects/spandan/
 quote: "Learning is not a spectator sport."
 quote_author: "D. Blocher"
 ---
+
+<div class="initiative-page-hero product-page-hero">
+  <a href="{{ site.baseurl }}/products/" class="initiative-back"><i class="ph ph-arrow-left"></i> Products</a>
+  <p class="story-label"><i class="ph ph-pulse"></i> Products</p>
+  <h1 class="initiative-page-h">Spandan</h1>
+</div>
+
+{% include page-quote.html %}
 
 <div class="product-page-meta">
   <span class="product-page-status">Deployed</span>
