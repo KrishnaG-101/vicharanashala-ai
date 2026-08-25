@@ -408,11 +408,10 @@ A curated 56-mission journey through linear algebra — from ratios on a plane t
 
   function drawDots(line) {
     dotsG.innerHTML = '';
-    var pts = [-2, -1, 1, 2, 3, 4];
-    pts.forEach(function(p) {
-      var x = 40 + p * 100;
+    var xs = [120, 200, 280, 360];
+    xs.forEach(function(x) {
       var y = 240 - line.slope * (x - 40);
-      if (y < 20 || y > 260) return;
+      if (y < 18 || y > 270) return;
       var c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       c.setAttribute('cx', x);
       c.setAttribute('cy', y);
@@ -806,30 +805,41 @@ Optional exam-mode supervision. Webcam + face-api.js emotion detection, focus / 
   var lookFill = document.getElementById('tnl-look-fill');
   if (!focusVal) return;
 
-  function setMeter(valEl, fillEl, pct) {
+  function setPct(valEl, fillEl, pct) {
     valEl.textContent = pct + '%';
     if (fillEl) fillEl.style.setProperty('--final', pct + '%');
   }
 
-  setMeter(focusVal, focusFill, 92);
-  setMeter(tabsVal, tabsFill, 8);
-  setMeter(lookVal, lookFill, 0);
+  function setCount(valEl, fillEl, n, max) {
+    valEl.textContent = n;
+    if (fillEl) fillEl.style.setProperty('--final', Math.min((n / max) * 100, 100) + '%');
+  }
+
+  setPct(focusVal, focusFill, 92);
+  setCount(tabsVal, tabsFill, 1, 5);
+  setCount(lookVal, lookFill, 0, 5);
 
   if (reduceMotion) return;
 
-  // tab-switch counter: 0 → 1 → 2 → 1 ...
+  // tab-switch counter: cycles 0 → 1 → 2 → 3 → 0 ...
   var t = 0;
   setInterval(function() {
     t = (t + 1) % 5;
-    var n = t === 4 ? 0 : t + 1;
-    tabsVal.textContent = n;
-    setMeter(tabsVal, tabsFill, Math.min(n * 30, 90));
+    var n = t;
+    setCount(tabsVal, tabsFill, n, 5);
   }, 3800);
+
+  // look-aways counter: cycles 0 → 1 → 0 → 1 ...
+  var l = 0;
+  setInterval(function() {
+    l = (l + 1) % 3;
+    setCount(lookVal, lookFill, l, 5);
+  }, 6200);
 
   // focus score breathing
   setInterval(function() {
     var base = 88 + Math.round(Math.random() * 8);
-    setMeter(focusVal, focusFill, base);
+    setPct(focusVal, focusFill, base);
   }, 5200);
 })();
 </script>

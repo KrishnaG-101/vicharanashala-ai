@@ -3072,6 +3072,8 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   background: #fff;
   padding: 1.2rem;
   margin-bottom: 1.2rem;
+
+  svg { display: block; width: 100%; height: auto; max-height: 280px; }
 }
 
 .tnl-linear-canvas-meta {
