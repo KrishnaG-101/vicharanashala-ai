@@ -3066,255 +3066,11 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   em { color: #f9f9f7; font-style: italic; font-weight: 500; }
 }
 
-.tnl-linear-canvas {
-  border: 1px solid $grey-color-light;
-  border-radius: 6px;
-  background: #fff;
-  padding: 1.2rem;
-  margin-bottom: 1.2rem;
-
-  svg { display: block; width: 100%; height: auto; max-height: 280px; }
-}
-
-.tnl-linear-canvas-meta {
-  display: flex;
-  gap: 0.6rem;
-  font-size: 0.78rem;
-  color: $grey-color;
-  margin-bottom: 0.6rem;
-  font-variant-numeric: tabular-nums;
-
-  span:first-child {
-    font-weight: 600;
-    color: $brand-color;
-    font-size: 0.9rem;
-    letter-spacing: -0.01em;
-  }
-}
-
-.tnl-linear-modules {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
-  margin-bottom: 1.5rem;
-}
-
-.tnl-linear-module {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  border: 1px solid $grey-color-light;
-  border-radius: 6px;
-  padding: 0.8rem 1rem;
-  background: #fff;
-  cursor: pointer;
-  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
-
-  &:hover {
-    transform: translateY(-2px);
-    border-color: $grey-color;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-  }
-
-  &.is-active {
-    border-color: $brand-color;
-    box-shadow: 0 0 0 2px rgba(224, 112, 32, 0.18);
-
-    .tnl-linear-module-num { background: $brand-color; color: #fff; }
-  }
-}
-
-.tnl-linear-module-num {
-  width: 32px;
-  height: 32px;
-  border-radius: 5px;
-  background: $grey-color-light;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 0.75rem;
-  color: $grey-color;
-  flex-shrink: 0;
-  transition: background 0.18s, color 0.18s;
-}
-
-.tnl-linear-module-body { flex: 1; min-width: 0; }
-
-.tnl-linear-module-title {
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: $text-color;
-}
-
-.tnl-linear-module-count {
-  font-size: 0.74rem;
-  color: $grey-color;
-  margin-top: 2px;
-}
-
-.tnl-linear-question {
-  border: 1px solid $grey-color-light;
-  border-radius: 8px;
-  padding: 1.4rem 1.6rem;
-  background: #fff;
-  margin-bottom: 1.5rem;
-}
-
-.tnl-linear-question-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.7rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.tnl-linear-pill {
-  background: rgba(58, 183, 191, 0.14);
-  color: #2a8a90;
-  padding: 0.25rem 0.7rem;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.tnl-linear-qprogress { color: $grey-color; font-variant-numeric: tabular-nums; }
-
-.tnl-linear-progress {
-  height: 4px;
-  background: $grey-color-light;
-  border-radius: 2px;
-  overflow: hidden;
-  margin-bottom: 1.2rem;
-}
-
-.tnl-linear-progress-bar {
-  height: 100%;
-  width: 73%;
-  background: linear-gradient(90deg, $brand-color, #3ab7bf);
-  border-radius: 2px;
-}
-
-.tnl-linear-story {
-  background: rgba(224, 112, 32, 0.06);
-  border-left: 3px solid $brand-color;
-  padding: 0.8rem 1rem;
-  border-radius: 0 4px 4px 0;
-  font-size: 0.92rem;
-  color: #444;
-  font-style: italic;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.tnl-linear-qtext {
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.3rem;
-}
-
-.tnl-linear-sub {
-  font-size: 0.82rem;
-  color: $grey-color;
-  margin-bottom: 1rem;
-  font-family: ui-monospace, "SF Mono", monospace;
-}
-
-.tnl-linear-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.tnl-linear-option {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  border: 1px solid $grey-color-light;
-  border-radius: 5px;
-  padding: 0.6rem 0.9rem;
-  cursor: pointer;
-  font-size: 0.92rem;
-  background: #fff;
-  transition: background 0.15s, border-color 0.15s, transform 0.18s;
-  overflow: hidden;
-
-  &:hover {
-    background: #efefec;
-    border-color: $grey-color;
-  }
-
-  &.is-correct {
-    background: rgba(58, 183, 191, 0.08);
-    border-color: #3ab7bf;
-    color: #2a8a90;
-    font-weight: 500;
-  }
-
-  &.is-faded { opacity: 0.5; }
-
-  &.is-locked { pointer-events: none; }
-
-  &.is-clicked { transform: scale(1.01); }
-}
-
-.tnl-linear-letter {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: $grey-color-light;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: $grey-color;
-  flex-shrink: 0;
-}
-
-.tnl-linear-option.is-correct .tnl-linear-letter {
-  background: #3ab7bf;
-  color: #fff;
-}
-
-.tnl-linear-opt-text { flex: 1; }
-
-.tnl-linear-mark {
-  color: #1a7a40;
-  font-weight: 700;
-  font-size: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-
-  .tnl-linear-option.is-correct & { opacity: 1; }
-}
-
-.tnl-linear-ripple {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(58, 183, 191, 0.4);
-  transform: translate(-50%, -50%) scale(1);
-  animation: tnl-ripple 0.7s ease-out forwards;
-  pointer-events: none;
-}
-
 .tnl-linear-feature-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
-}
-
-@keyframes tnl-ripple {
-  0%   { transform: translate(-50%, -50%) scale(1);   opacity: 0.6; }
-  100% { transform: translate(-50%, -50%) scale(28);  opacity: 0; }
+  margin-top: 1.5rem;
 }
 
 // ── Proctoring System ──
@@ -3552,23 +3308,11 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   &.tnl-fill-amber { background: linear-gradient(90deg, $brand-color, #b85a00); }
 }
 
-.tnl-proctor-admin {
-  border: 1px solid $grey-color-light;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-}
-
 .tnl-proctor-feature-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
+  margin-top: 1.5rem;
 }
 
 @keyframes tnl-face-mesh    { from { background-position: 0 0, 0 0, 0 0; } to { background-position: 32px 32px, 48px 48px, 64px 64px; } }
@@ -3589,7 +3333,4 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   .tnl-proctor-eye { animation: none; }
   .tnl-proctor-cursor { animation: none; }
   .tnl-proctor-stat-fill { transition: none; }
-  #tnl-linear-path { stroke-dashoffset: 0 !important; }
-  .tnl-linear-ripple { display: none; }
-  .tnl-linear-option.is-clicked { transform: none; }
 }

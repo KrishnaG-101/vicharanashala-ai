@@ -17,7 +17,6 @@ quote_author: "Said of Tenali Raman"
     .page-content .wrapper .tnl-demo { padding: 1rem; }
     .page-content .wrapper .tnl-adapter { height: 38px; }
     .page-content .wrapper .tnl-modes { grid-template-columns: 1fr; }
-    .page-content .wrapper .tnl-linear-modules { grid-template-columns: repeat(2, 1fr); }
     .page-content .wrapper .tnl-linear-feature-row { grid-template-columns: 1fr; }
     .page-content .wrapper .tnl-proctor-grid { grid-template-columns: 1fr; }
     .page-content .wrapper .tnl-proctor-feature-row { grid-template-columns: 1fr; }
@@ -267,104 +266,36 @@ A curated 56-mission journey through linear algebra — from ratios on a plane t
     <p class="tnl-linear-p">From <em>Ram and Lakshman's piggy-bank points</em> to <em>how Google ranks pages</em>. Each question is a story; the math is what you take away.</p>
   </div>
 
-  <div class="tnl-linear-canvas" id="tnl-linear-canvas">
-    <div class="tnl-linear-canvas-meta">
-      <span id="tnl-linear-equation">y = 2x</span>
-      <span>·</span>
-      <span id="tnl-linear-slope">slope = 2</span>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <i class="ph ph-ruler audience-card-icon"></i>
+      <div class="audience-card-title">M1 · Ratios &amp; Lines</div>
+      <p class="audience-card-desc">14 missions. Reading ratios from a real-life story, plotting ordered pairs, recognising that a ratio between two numbers produces points on a straight line through the origin.</p>
     </div>
-    <svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" id="tnl-linear-svg">
-      <defs>
-        <marker id="tnl-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#767676"/></marker>
-      </defs>
-      <line x1="40" y1="240" x2="480" y2="240" stroke="#767676" stroke-width="1" marker-end="url(#tnl-arr)"/>
-      <line x1="40" y1="240" x2="40" y2="20"  stroke="#767676" stroke-width="1" marker-end="url(#tnl-arr)"/>
-      <text x="468" y="258" fill="#767676" font-size="12" font-family="Inter">x</text>
-      <text x="50"  y="32"  fill="#767676" font-size="12" font-family="Inter">y</text>
-      <line x1="40"  y1="180" x2="480" y2="180" stroke="#e2e2de" stroke-width="0.5" stroke-dasharray="2,4"/>
-      <line x1="40"  y1="120" x2="480" y2="120" stroke="#e2e2de" stroke-width="0.5" stroke-dasharray="2,4"/>
-      <line x1="40"  y1="60"  x2="480" y2="60"  stroke="#e2e2de" stroke-width="0.5" stroke-dasharray="2,4"/>
-      <line x1="140" y1="240" x2="140" y2="20"  stroke="#e2e2de" stroke-width="0.5" stroke-dasharray="2,4"/>
-      <line x1="240" y1="240" x2="240" y2="20"  stroke="#e2e2de" stroke-width="0.5" stroke-dasharray="2,4"/>
-      <line x1="340" y1="240" x2="340" y2="20"  stroke="#e2e2de" stroke-width="0.5" stroke-dasharray="2,4"/>
-      <line x1="440" y1="240" x2="440" y2="20"  stroke="#e2e2de" stroke-width="0.5" stroke-dasharray="2,4"/>
-      <path id="tnl-linear-path" d="M 40 240 L 440 60" stroke="#e07020" stroke-width="2" fill="none" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
-      <g id="tnl-linear-dots"></g>
-    </svg>
-  </div>
-
-  <div class="tnl-linear-modules">
-    <div class="tnl-linear-module is-active" data-module="1" data-slope="2" data-label="y = 2x">
-      <div class="tnl-linear-module-num">M1</div>
-      <div class="tnl-linear-module-body">
-        <div class="tnl-linear-module-title">Ratios &amp; Lines</div>
-        <div class="tnl-linear-module-count">14 missions</div>
-      </div>
+    <div class="audience-card">
+      <i class="ph ph-compass audience-card-icon"></i>
+      <div class="audience-card-title">M2 · Coordinate Geometry</div>
+      <p class="audience-card-desc">10 missions. Coordinate moves, sequences of turns, finding the equation of a line that passes through a set of points.</p>
     </div>
-    <div class="tnl-linear-module" data-module="2" data-slope="1" data-label="y = x">
-      <div class="tnl-linear-module-num">M2</div>
-      <div class="tnl-linear-module-body">
-        <div class="tnl-linear-module-title">Coordinate Geometry</div>
-        <div class="tnl-linear-module-count">10 missions</div>
-      </div>
+    <div class="audience-card">
+      <i class="ph ph-arrows-out-cardinal audience-card-icon"></i>
+      <div class="audience-card-title">M3 · Linear Transforms</div>
+      <p class="audience-card-desc">15 missions. Translation, rotation, reflection, scaling — composing transformations and finding fixed points.</p>
     </div>
-    <div class="tnl-linear-module" data-module="3" data-slope="0.5" data-label="y = 0.5x">
-      <div class="tnl-linear-module-num">M3</div>
-      <div class="tnl-linear-module-body">
-        <div class="tnl-linear-module-title">Linear Transforms</div>
-        <div class="tnl-linear-module-count">15 missions</div>
-      </div>
+    <div class="audience-card">
+      <i class="ph ph-grid-four audience-card-icon"></i>
+      <div class="audience-card-title">M4 · Matrices</div>
+      <p class="audience-card-desc">9 missions. Matrix multiplication, representation of linear maps, change of basis, rank and null space.</p>
     </div>
-    <div class="tnl-linear-module" data-module="4" data-slope="-1" data-label="y = −x">
-      <div class="tnl-linear-module-num">M4</div>
-      <div class="tnl-linear-module-body">
-        <div class="tnl-linear-module-title">Matrices</div>
-        <div class="tnl-linear-module-count">9 missions</div>
-      </div>
+    <div class="audience-card">
+      <i class="ph ph-math-operations audience-card-icon"></i>
+      <div class="audience-card-title">M5 · Determinants &amp; Inverses</div>
+      <p class="audience-card-desc">5 missions. Determinants as area, invertibility, solving linear systems via matrix inversion.</p>
     </div>
-    <div class="tnl-linear-module" data-module="5" data-slope="3" data-label="y = 3x">
-      <div class="tnl-linear-module-num">M5</div>
-      <div class="tnl-linear-module-body">
-        <div class="tnl-linear-module-title">Determinants &amp; Inverses</div>
-        <div class="tnl-linear-module-count">5 missions</div>
-      </div>
-    </div>
-    <div class="tnl-linear-module" data-module="6" data-slope="-2" data-label="y = −2x">
-      <div class="tnl-linear-module-num">M6</div>
-      <div class="tnl-linear-module-body">
-        <div class="tnl-linear-module-title">Recommenders &amp; PageRank</div>
-        <div class="tnl-linear-module-count">6 missions</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tnl-linear-question">
-    <div class="tnl-linear-question-meta">
-      <span class="tnl-linear-pill">M1 · Q1.1</span>
-      <span class="tnl-linear-qprogress">73% complete</span>
-    </div>
-    <div class="tnl-linear-progress"><div class="tnl-linear-progress-bar"></div></div>
-    <div class="tnl-linear-story">"Ram's money is twice Lakshman's. If Lakshman has ₹10, how much does Ram have?"</div>
-    <div class="tnl-linear-qtext">Find Ram's savings.</div>
-    <div class="tnl-linear-sub">R = 2L · L = 10</div>
-    <div class="tnl-linear-options">
-      <div class="tnl-linear-option" data-correct="true">
-        <span class="tnl-linear-letter">A</span>
-        <span class="tnl-linear-opt-text">Twenty rupees amount</span>
-        <span class="tnl-linear-mark">✓</span>
-      </div>
-      <div class="tnl-linear-option" data-correct="false">
-        <span class="tnl-linear-letter">B</span>
-        <span class="tnl-linear-opt-text">Same as Lakshman has</span>
-      </div>
-      <div class="tnl-linear-option" data-correct="false">
-        <span class="tnl-linear-letter">C</span>
-        <span class="tnl-linear-opt-text">Five rupees amount</span>
-      </div>
-      <div class="tnl-linear-option" data-correct="false">
-        <span class="tnl-linear-letter">D</span>
-        <span class="tnl-linear-opt-text">Thirty rupees amount</span>
-      </div>
+    <div class="audience-card">
+      <i class="ph ph-chart-network audience-card-icon"></i>
+      <div class="audience-card-title">M6 · Recommenders &amp; PageRank</div>
+      <p class="audience-card-desc">6 missions. Matrix factorisation, dimensionality reduction, the PageRank algorithm and its use in real-world recommendation engines.</p>
     </div>
   </div>
 
@@ -386,92 +317,6 @@ A curated 56-mission journey through linear algebra — from ratios on a plane t
     </div>
   </div>
 </div>
-
-<script>
-(function() {
-  var canvas = document.getElementById('tnl-linear-canvas');
-  if (!canvas) return;
-  var path = document.getElementById('tnl-linear-path');
-  var dotsG = document.getElementById('tnl-linear-dots');
-  var eqLabel = document.getElementById('tnl-linear-equation');
-  var slopeLabel = document.getElementById('tnl-linear-slope');
-  var modules = document.querySelectorAll('.tnl-linear-module');
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function lineFor(slope) {
-    // y goes up = y decreases in svg coords; origin (40, 240); x range 40..440
-    var x1 = 40, x2 = 440;
-    var y1 = 240 - slope * (x1 - 40);
-    var y2 = 240 - slope * (x2 - 40);
-    return { x1: x1, y1: y1, x2: x2, y2: y2, slope: slope };
-  }
-
-  function drawDots(line) {
-    dotsG.innerHTML = '';
-    var xs = [120, 200, 280, 360];
-    xs.forEach(function(x) {
-      var y = 240 - line.slope * (x - 40);
-      if (y < 18 || y > 270) return;
-      var c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      c.setAttribute('cx', x);
-      c.setAttribute('cy', y);
-      c.setAttribute('r', 4);
-      c.setAttribute('fill', '#e07020');
-      dotsG.appendChild(c);
-    });
-  }
-
-  function redraw(slope, label) {
-    var line = lineFor(slope);
-    eqLabel.textContent = label;
-    slopeLabel.textContent = 'slope = ' + slope;
-    path.setAttribute('d', 'M ' + line.x1 + ' ' + line.y1 + ' L ' + line.x2 + ' ' + line.y2);
-    if (reduceMotion) {
-      path.style.strokeDashoffset = 0;
-      drawDots(line);
-      return;
-    }
-    path.style.strokeDashoffset = 100;
-    // restart animation
-    void path.getBoundingClientRect();
-    path.style.strokeDashoffset = 0;
-    setTimeout(function() { drawDots(line); }, 350);
-  }
-
-  modules.forEach(function(m) {
-    m.addEventListener('click', function() {
-      modules.forEach(function(x) { x.classList.remove('is-active'); });
-      m.classList.add('is-active');
-      redraw(parseFloat(m.dataset.slope), m.dataset.label);
-    });
-  });
-
-  // initial draw
-  var first = document.querySelector('.tnl-linear-module.is-active');
-  if (first) redraw(parseFloat(first.dataset.slope), first.dataset.label);
-
-  // MCQ option click
-  var options = document.querySelectorAll('.tnl-linear-option');
-  options.forEach(function(opt) {
-    opt.addEventListener('click', function() {
-      if (opt.classList.contains('is-locked')) return;
-      options.forEach(function(o) { o.classList.add('is-locked'); });
-      options.forEach(function(o) {
-        if (o.dataset.correct === 'true') o.classList.add('is-correct');
-        else o.classList.add('is-faded');
-      });
-      opt.classList.add('is-correct', 'is-clicked');
-      // ripple
-      if (!reduceMotion) {
-        var r = document.createElement('span');
-        r.className = 'tnl-linear-ripple';
-        opt.appendChild(r);
-        setTimeout(function() { r.remove(); }, 700);
-      }
-    });
-  });
-})();
-</script>
 
 ---
 
@@ -771,10 +616,6 @@ Optional exam-mode supervision. Webcam + face-api.js emotion detection, focus / 
     </div>
   </div>
 
-  <div class="tnl-proctor-admin">
-    <img src="{{ site.baseurl }}/assets/images/tenali/proctor-admin.png" alt="Tenali proctoring admin dashboard" loading="lazy">
-  </div>
-
   <div class="tnl-proctor-feature-row">
     <div class="audience-card">
       <i class="ph ph-camera audience-card-icon"></i>
@@ -943,8 +784,6 @@ A flagship initiative running on Tenali — a structured summer learning cohort 
   <h2>Summership — the cohort mode Tenali was built for.</h2>
   <p>Engagement tracked per session, per learner, per cohort. The same engine that keeps one student in their zone keeps a hundred.</p>
 </div>
-
-<img src="{{ site.baseurl }}/assets/images/tenali/summership.png" alt="Tenali Summership — guided learning journey tour" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px; margin-top:1.5rem;">
 
 ---
 
