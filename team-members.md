@@ -155,9 +155,9 @@ quote_author: "Henry Ford"
 <style>
 /* ── Intro ── */
 .team-intro {
-  padding: 3rem 0 3.5rem;
+  padding: 0 0 1.5rem;
   border-bottom: 1px solid #e2e2de;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 .team-intro-p { font-size: 1rem; line-height: 1.78; color: #444; max-width: 640px; margin: 0; }
 

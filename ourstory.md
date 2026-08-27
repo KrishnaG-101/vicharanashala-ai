@@ -325,7 +325,7 @@ fetch('{{ site.baseurl }}/assets/data/india.geojson')
   .tl { padding-left: 52px; }
   .tl::before { left: 18px; }
   .tl-fill { left: 18px; }
-  .tl-icon { left: -38px; width: 28px; height: 28px; font-size: 14px; }
+  .tl-icon { left: -47px; width: 28px; height: 28px; font-size: 14px; }
   .tl-title { font-size: 1.05rem; }
 }
 </style>
@@ -361,9 +361,16 @@ fetch('{{ site.baseurl }}/assets/data/india.geojson')
 
 <style>
 .story-intro {
-  padding: 3rem 0 3.5rem;
+  padding: 0 0 1.5rem;
   border-bottom: 1px solid #e2e2de;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .story-intro {
+    padding: 0 0 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .story-label {
