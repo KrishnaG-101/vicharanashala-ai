@@ -3008,9 +3008,48 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   100% { opacity: 0; transform: translateY(-22px); }
 }
 
+// ── Key Features marquee (RTL auto-scroll, 3 cards visible) ──
+.tnl-marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0 0;
+  padding: 0.25rem 0;
+  // Soft fade at edges so cards slide in/out gracefully
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.tnl-marquee-track {
+  display: flex;
+  gap: 1.2rem;
+  width: max-content;
+  // RTL direction + translate left = cards visually move right→left
+  animation: tnl-marquee-rtl 48s linear infinite;
+
+  &:hover { animation-play-state: paused; }
+
+  > .audience-card {
+    flex: 0 0 calc((100vw - 6rem) / 3);
+    min-width: 260px;
+    max-width: 360px;
+    margin: 0;
+
+    @include media-query($on-palm) {
+      flex: 0 0 80vw;
+      min-width: 0;
+    }
+  }
+}
+
+@keyframes tnl-marquee-rtl {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 // ── Reduced-motion respect ──
 @media (prefers-reduced-motion: reduce) {
   .tnl-adapter-marker { transition: none; }
   .tnl-adapter-band.is-active { animation: none; box-shadow: inset 0 0 0 2px $brand-color; }
   .tnl-feed.is-visible { animation: none; opacity: 0; }
+  .tnl-marquee-track { animation: none; }
 }

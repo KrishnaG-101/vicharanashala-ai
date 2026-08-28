@@ -248,51 +248,48 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
 
 ## **Key Features**
 
-<div class="audience-grid">
-  <div class="audience-card">
-    <i class="ph ph-chart-line-up audience-card-icon"></i>
-    <div class="audience-card-title">Adaptive Difficulty</div>
-    <p class="audience-card-desc">A float adaptScore (0–3) shifts with every answer. Maps to bands easy → medium → hard → extrahard, driving the difficulty of every new question.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-swords audience-card-icon"></i>
-    <div class="audience-card-title">Battle Arena</div>
-    <p class="audience-card-desc">Live 1v1 fastest-finger duels over Socket.IO. Same question, first correct answer wins.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-magnifying-glass audience-card-icon"></i>
-    <div class="audience-card-title">Detective Agency</div>
-    <p class="audience-card-desc">Chain of math clues; solving one unlocks the next. Hundreds of procedurally generated cases.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-lightbulb audience-card-icon"></i>
-    <div class="audience-card-title">Solve-for-Explanation</div>
-    <p class="audience-card-desc">Send <code>{ solve: true }</code> on any POST *-api/check. Server returns a step-by-step walkthrough — covers 50+ puzzle types.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-graduation-cap audience-card-icon"></i>
-    <div class="audience-card-title">Guided Journey</div>
-    <p class="audience-card-desc">Linear curriculum with concept checkpoints. Server enforces progression: locked → blue → bronze → silver → gold.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-flask audience-card-icon"></i>
-    <div class="audience-card-title">Concept Lab</div>
-    <p class="audience-card-desc">5-stage mastery loop — Predict → Grid → Guided → Independent → Review — from intuition to fluency.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-puzzle-piece audience-card-icon"></i>
-    <div class="audience-card-title">Spaced Repetition</div>
-    <p class="audience-card-desc">Recently-missed questions are promoted back into rotation, driven by Bayesian Knowledge Tracing.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-shield-check audience-card-icon"></i>
-    <div class="audience-card-title">Proctoring</div>
-    <p class="audience-card-desc">Optional exam-mode supervision via face-api.js — focus score, tab switches, look-aways — to a staff-only dashboard.</p>
-  </div>
-</div>
-
-<div class="grid-extra-wrap" id="tenali-features-extra-wrap">
-  <div class="audience-grid audience-grid--continued">
+<div class="tnl-marquee">
+  <div class="tnl-marquee-track" id="tnl-features-track">
+    <div class="audience-card">
+      <i class="ph ph-chart-line-up audience-card-icon"></i>
+      <div class="audience-card-title">Adaptive Difficulty</div>
+      <p class="audience-card-desc">A float adaptScore (0–3) shifts with every answer. Maps to bands easy → medium → hard → extrahard.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-swords audience-card-icon"></i>
+      <div class="audience-card-title">Battle Arena</div>
+      <p class="audience-card-desc">Live 1v1 fastest-finger duels over Socket.IO. Same question, first correct answer wins.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-magnifying-glass audience-card-icon"></i>
+      <div class="audience-card-title">Detective Agency</div>
+      <p class="audience-card-desc">Chain of math clues; solving one unlocks the next. Hundreds of procedurally generated cases.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-lightbulb audience-card-icon"></i>
+      <div class="audience-card-title">Solve-for-Explanation</div>
+      <p class="audience-card-desc">Send <code>{ solve: true }</code> on any POST *-api/check. Step-by-step walkthrough — 50+ puzzle types.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-graduation-cap audience-card-icon"></i>
+      <div class="audience-card-title">Guided Journey</div>
+      <p class="audience-card-desc">Linear curriculum with concept checkpoints. Server enforces progression: locked → blue → bronze → silver → gold.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-flask audience-card-icon"></i>
+      <div class="audience-card-title">Concept Lab</div>
+      <p class="audience-card-desc">5-stage mastery loop — Predict → Grid → Guided → Independent → Review.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-puzzle-piece audience-card-icon"></i>
+      <div class="audience-card-title">Spaced Repetition</div>
+      <p class="audience-card-desc">Recently-missed questions are promoted back into rotation by Bayesian Knowledge Tracing.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-shield-check audience-card-icon"></i>
+      <div class="audience-card-title">Proctoring</div>
+      <p class="audience-card-desc">Optional exam-mode supervision via face-api.js — focus score, tab switches, look-aways.</p>
+    </div>
     <div class="audience-card">
       <i class="ph ph-trophy audience-card-icon"></i>
       <div class="audience-card-title">Gamification</div>
@@ -321,31 +318,16 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
   </div>
 </div>
 
-<div class="grid-view-more">
-  <button class="grid-view-more-btn" id="tenali-features-more">View more ↓</button>
-</div>
-
 <script>
 (function() {
-  var btn = document.getElementById('tenali-features-more');
-  var wrap = document.getElementById('tenali-features-extra-wrap');
-  if (!btn || !wrap) return;
-  var inner = wrap.firstElementChild;
-  var expanded = false;
-  function expand() {
-    wrap.classList.add('is-expanded');
-    wrap.style.maxHeight = inner.scrollHeight + 'px';
-  }
-  function collapse() {
-    wrap.style.maxHeight = inner.scrollHeight + 'px';
-    void wrap.offsetHeight;
-    wrap.classList.remove('is-expanded');
-    wrap.style.maxHeight = '0px';
-  }
-  btn.addEventListener('click', function() {
-    expanded = !expanded;
-    if (expanded) { expand(); } else { collapse(); }
-    btn.textContent = expanded ? 'View less ↑' : 'View more ↓';
+  var track = document.getElementById('tnl-features-track');
+  if (!track) return;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+  // Clone all children once for seamless RTL loop
+  var originals = Array.prototype.slice.call(track.children);
+  originals.forEach(function(card) {
+    track.appendChild(card.cloneNode(true));
   });
 })();
 </script>
