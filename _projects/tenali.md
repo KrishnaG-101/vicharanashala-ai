@@ -565,7 +565,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">JG</span>
-      <img data-fallbacks="https://unavatar.io/linkedin/jinal-gupta-220a652b6|https://avatars.githubusercontent.com/jgupta05072003-code?v=4&size=200|https://ui-avatars.com/api/?name=Jinal+Gupta&size=200&background=e07020&color=fff&bold=true" src="https://www.linkedin.com/in/jinal-gupta-220a652b6/" alt="Jinal Gupta" loading="lazy">
+      <img data-fallbacks="https://unavatar.io/linkedin/jinal-gupta-220a652b6|https://avatars.githubusercontent.com/jgupta05072003-code?v=4&size=200|https://ui-avatars.com/api/?name=Jinal+Gupta&size=200&background=e07020&color=fff&bold=true" src="https://media.licdn.com/dms/image/v2/D4E03AQFMNHT1AN-KMw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727588992014?e=1789603200&v=beta&t=bvnvOgNxqEDWxyGAxqUMjG_rcY0WzPhURL-ayVWH114" alt="Jinal Gupta" loading="lazy">
     </div>
     <div class="tnl-core-name">Jinal Gupta</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
@@ -589,7 +589,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">KG</span>
-      <img data-fallbacks="https://unavatar.io/linkedin/krishna-gelra|https://avatars.githubusercontent.com/KrishnaG-101?v=4&size=200|https://ui-avatars.com/api/?name=Krishna+Gelra&size=200&background=e07020&color=fff&bold=true" src="https://www.linkedin.com/in/krishna-gelra/" alt="Krishna Gelra" loading="lazy">
+      <img data-fallbacks="https://unavatar.io/linkedin/krishna-gelra|https://avatars.githubusercontent.com/KrishnaG-101?v=4&size=200|https://ui-avatars.com/api/?name=Krishna+Gelra&size=200&background=e07020&color=fff&bold=true" src="https://media.licdn.com/dms/image/v2/D4D35AQFyeM4p9if0Eg/profile-framedphoto-shrink_800_800/B4DZZ4BQRQGgAk-/0/1745770317186?e=1788537600&v=beta&t=WK1uo-OzLozpQDxPtK6_V6ZkOv47zcP0Zjely6PjW8s" alt="Krishna Gelra" loading="lazy">
     </div>
     <div class="tnl-core-name">Krishna Gelra</div>
     <div class="tnl-core-role">Maintainer</div>
