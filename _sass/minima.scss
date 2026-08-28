@@ -332,37 +332,21 @@ table {
 // ── Stat callout ──
 .stat-row {
   display: flex;
-  gap: 1.4rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
   margin: 2.4rem 0;
-  padding: 0;
+  padding: 2rem 0;
   border-top: 1px solid $grey-color-light;
   border-bottom: 1px solid $grey-color-light;
 }
 
 .stat {
-  flex: 1;
-  min-width: 130px;
   display: flex;
   flex-direction: column;
-  padding: 1.4rem 1.2rem 1.5rem;
-  border-radius: 8px;
-  position: relative;
   cursor: default;
-  transition: background 0.25s ease, transform 0.25s ease;
-
-  // Vertical divider between stats
-  & + & {
-    border-left: 1px solid $grey-color-light;
-  }
-
-  @include media-query($on-palm) {
-    flex-basis: calc(50% - 0.7rem);
-    & + & { border-left: none; }
-  }
+  transition: transform 0.25s ease;
 
   &:hover {
-    background: linear-gradient(180deg, rgba(224,112,32,0.04), transparent 70%);
     transform: translateY(-2px);
 
     .stat-number { color: $brand-color; }
@@ -384,8 +368,8 @@ table {
     letter-spacing: 0.09em;
     text-transform: uppercase;
     color: $grey-color;
-    margin-top: 0.45rem;
-    max-width: 160px;
+    margin-top: 0.35rem;
+    max-width: 140px;
     line-height: 1.4;
   }
 }
