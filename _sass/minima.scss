@@ -2897,7 +2897,6 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   margin-top: 1.5rem;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   // Start invisible + nudged down; animation reveals on .is-in
   opacity: 0;
   transform: translateY(18px);
