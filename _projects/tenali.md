@@ -553,17 +553,37 @@ Eight ways to play. Same engine, different shape on top.
 
 ## **Contributors**
 
-<div class="contributor-list">
-  <span class="contributor-chip">S. R. S. Iyengar</span>
-  <span class="contributor-chip">Jinal Gupta</span>
-  <span class="contributor-chip">Mudit Agrawal</span>
+<div class="tnl-core-team">
+  <div class="tnl-core-card">
+    <div class="tnl-core-avatar">SR</div>
+    <div class="tnl-core-name">S. R. S. Iyengar</div>
+    <div class="tnl-core-role">Owner</div>
+  </div>
+  <div class="tnl-core-card">
+    <div class="tnl-core-avatar">JG</div>
+    <div class="tnl-core-name">Jinal Gupta</div>
+    <div class="tnl-core-role">Mentor · Maintainer</div>
+  </div>
+  <div class="tnl-core-card">
+    <div class="tnl-core-avatar">SH</div>
+    <div class="tnl-core-name">S. Hamsalekha</div>
+    <div class="tnl-core-role">Maintainer</div>
+  </div>
+  <div class="tnl-core-card">
+    <div class="tnl-core-avatar">MA</div>
+    <div class="tnl-core-name">Mudit Agrawal</div>
+    <div class="tnl-core-role">Maintainer</div>
+  </div>
+</div>
+
+<div class="contributor-list tnl-contrib-list">
   <span class="contributor-chip">Lakshmi Varshini Nandula</span>
   <span class="contributor-chip">Sameer Mishra</span>
   <span class="contributor-chip">Vaibhav Satish</span>
   <span class="contributor-chip">Diptosubhro Datta</span>
   <span class="contributor-chip">Ritish Karmakar</span>
   <span class="contributor-chip">Ahana Banerjee</span>
-  <span class="contributor-chip">K C Dharshan</span>
+  <span class="contributor-chip">K. C. Dharshan</span>
 </div>
 
 <a class="contributor-more" href="https://github.com/vicharanashala/tenali/graphs/contributors" target="_blank" rel="noopener">See the full list on GitHub <i class="ph ph-arrow-right"></i></a>
