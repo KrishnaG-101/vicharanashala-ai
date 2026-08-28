@@ -324,67 +324,93 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
 
 Eight ways to play. Same engine, different shape on top.
 
-<div class="scenario-tabs">
-  <div class="scenario-tab-bar">
-    <button class="scenario-tab active" onclick="showTnlMode('goal', this)">Goal Practice</button>
-    <button class="scenario-tab" onclick="showTnlMode('battle', this)">Battle Arena</button>
-    <button class="scenario-tab" onclick="showTnlMode('detective', this)">Detective</button>
-    <button class="scenario-tab" onclick="showTnlMode('riddles', this)">Riddles</button>
-    <button class="scenario-tab" onclick="showTnlMode('journey', this)">Guided Journey</button>
-    <button class="scenario-tab" onclick="showTnlMode('random', this)">Random Mix</button>
-    <button class="scenario-tab" onclick="showTnlMode('custom', this)">Custom Lesson</button>
-    <button class="scenario-tab" onclick="showTnlMode('lal', this)">Linear Algebra Lab</button>
-  </div>
-
-  <div class="scenario-panel active" id="tnl-mode-goal">
-    <div class="scenario-panel-head"><i class="ph ph-target scenario-icon"></i><span class="scenario-title">Goal Practice</span></div>
-    <p>Pick a target score on a topic and chase it. The engine adapts as you go.</p>
-    <span class="scenario-stat"><i class="ph ph-trend-up"></i> Hit your target or beat it</span>
-  </div>
-  <div class="scenario-panel" id="tnl-mode-battle">
-    <div class="scenario-panel-head"><i class="ph ph-swords scenario-icon"></i><span class="scenario-title">Battle Arena</span></div>
-    <p>Two players, one question, first correct answer wins. Streaks drive matchmaking.</p>
-    <span class="scenario-stat"><i class="ph ph-globe"></i> Multiplayer over Socket.IO</span>
-  </div>
-  <div class="scenario-panel" id="tnl-mode-detective">
-    <div class="scenario-panel-head"><i class="ph ph-magnifying-glass scenario-icon"></i><span class="scenario-title">Detective Agency</span></div>
-    <p>Chained math clues; solving one unlocks the next. Hundreds of cases, procedurally generated.</p>
-    <span class="scenario-stat"><i class="ph ph-path"></i> Chained clue progression</span>
-  </div>
-  <div class="scenario-panel" id="tnl-mode-riddles">
-    <div class="scenario-panel-head"><i class="ph ph-lightbulb scenario-icon"></i><span class="scenario-title">Math Riddles</span></div>
-    <p>Find the hidden rule. 48 riddles — find-rule, sequence, logic, image.</p>
-    <span class="scenario-stat"><i class="ph ph-shuffle"></i> 48 hand-authored riddles</span>
-  </div>
-  <div class="scenario-panel" id="tnl-mode-journey">
-    <div class="scenario-panel-head"><i class="ph ph-graduation-cap scenario-icon"></i><span class="scenario-title">Guided Learning Journey</span></div>
-    <p>Linear curriculum with concept checkpoints. Next concept unlocks only after mastery.</p>
-    <span class="scenario-stat"><i class="ph ph-lock-key"></i> Server-enforced progression</span>
-  </div>
-  <div class="scenario-panel" id="tnl-mode-random">
-    <div class="scenario-panel-head"><i class="ph ph-shuffle scenario-icon"></i><span class="scenario-title">Random Mix</span></div>
-    <p>Pulls from wherever your adaptScore is lowest.</p>
-    <span class="scenario-stat"><i class="ph ph-chart-line-up"></i> Targets weak areas</span>
-  </div>
-  <div class="scenario-panel" id="tnl-mode-custom">
-    <div class="scenario-panel-head"><i class="ph ph-sliders scenario-icon"></i><span class="scenario-title">Custom Lesson</span></div>
-    <p>Hand-pick topics and question counts.</p>
-    <span class="scenario-stat"><i class="ph ph-pencil"></i> You decide the mix</span>
-  </div>
-  <div class="scenario-panel" id="tnl-mode-lal">
-    <div class="scenario-panel-head"><i class="ph ph-function scenario-icon"></i><span class="scenario-title">Linear Algebra Lab</span></div>
-    <p>56 missions across 6 modules — ratios on a plane, coordinate geometry, linear transforms, matrices, determinants, PageRank. Each question is a story.</p>
-    <span class="scenario-stat"><i class="ph ph-chart-network"></i> 6 modules · 4 difficulty bands</span>
+<div class="tnl-marquee tnl-marquee--2" id="tnl-modes-marquee">
+  <div class="tnl-marquee-track" id="tnl-modes-track">
+    <div class="audience-card">
+      <i class="ph ph-target audience-card-icon"></i>
+      <div class="audience-card-title">Goal Practice</div>
+      <p class="audience-card-desc">Pick a target score on a topic and chase it. The engine adapts as you go.</p>
+      <span class="scenario-stat"><i class="ph ph-trend-up"></i> Hit your target or beat it</span>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-swords audience-card-icon"></i>
+      <div class="audience-card-title">Battle Arena</div>
+      <p class="audience-card-desc">Two players, one question, first correct answer wins. Streaks drive matchmaking.</p>
+      <span class="scenario-stat"><i class="ph ph-globe"></i> Multiplayer over Socket.IO</span>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-magnifying-glass audience-card-icon"></i>
+      <div class="audience-card-title">Detective Agency</div>
+      <p class="audience-card-desc">Chained math clues; solving one unlocks the next. Hundreds of cases, procedurally generated.</p>
+      <span class="scenario-stat"><i class="ph ph-path"></i> Chained clue progression</span>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-lightbulb audience-card-icon"></i>
+      <div class="audience-card-title">Math Riddles</div>
+      <p class="audience-card-desc">Find the hidden rule. 48 riddles — find-rule, sequence, logic, image.</p>
+      <span class="scenario-stat"><i class="ph ph-shuffle"></i> 48 hand-authored riddles</span>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-graduation-cap audience-card-icon"></i>
+      <div class="audience-card-title">Guided Learning Journey</div>
+      <p class="audience-card-desc">Linear curriculum with concept checkpoints. Next concept unlocks only after mastery.</p>
+      <span class="scenario-stat"><i class="ph ph-lock-key"></i> Server-enforced progression</span>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-shuffle audience-card-icon"></i>
+      <div class="audience-card-title">Random Mix</div>
+      <p class="audience-card-desc">Pulls from wherever your adaptScore is lowest.</p>
+      <span class="scenario-stat"><i class="ph ph-chart-line-up"></i> Targets weak areas</span>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-sliders audience-card-icon"></i>
+      <div class="audience-card-title">Custom Lesson</div>
+      <p class="audience-card-desc">Hand-pick topics and question counts.</p>
+      <span class="scenario-stat"><i class="ph ph-pencil"></i> You decide the mix</span>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-function audience-card-icon"></i>
+      <div class="audience-card-title">Linear Algebra Lab</div>
+      <p class="audience-card-desc">56 missions across 6 modules — ratios, coordinate geometry, linear transforms, matrices, determinants, PageRank.</p>
+      <span class="scenario-stat"><i class="ph ph-chart-network"></i> 6 modules · 4 difficulty bands</span>
+    </div>
   </div>
 </div>
 
 <script>
-function showTnlMode(id, btn) {
-  document.querySelectorAll('[id^="tnl-mode-"]').forEach(function(p) { p.classList.remove('active'); });
-  document.querySelectorAll('.scenario-tab').forEach(function(t) { t.classList.remove('active'); });
-  document.getElementById('tnl-mode-' + id).classList.add('active');
-  btn.classList.add('active');
-}
+(function() {
+  var track = document.getElementById('tnl-modes-track');
+  if (!track) return;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Clone for seamless RTL loop
+  var originals = Array.prototype.slice.call(track.children);
+  originals.forEach(function(card) { track.appendChild(card.cloneNode(true)); });
+
+  var halfWidth = track.scrollWidth / 2;
+  var position = 0;
+  var velocity = reduceMotion ? 0 : 0.4;
+  var paused = false;
+
+  function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
+
+  function frame() {
+    if (!paused && velocity !== 0) {
+      position -= velocity; // RTL
+      if (-position >= halfWidth) position += halfWidth;
+      apply();
+    }
+    requestAnimationFrame(frame);
+  }
+  apply();
+  requestAnimationFrame(frame);
+
+  var marquee = track.parentElement;
+  if (marquee) {
+    marquee.addEventListener('mouseenter', function() { paused = true; });
+    marquee.addEventListener('mouseleave', function() { paused = false; });
+  }
+})();
 </script>
 
 ---

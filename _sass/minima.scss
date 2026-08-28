@@ -2849,6 +2849,18 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   }
 }
 
+// 2-up variant (modes): 2 cards visible at a time
+.tnl-marquee--2 .tnl-marquee-track > .audience-card {
+  flex: 0 0 calc((100vw - 4rem) / 2);
+  min-width: 320px;
+  max-width: 520px;
+
+  @include media-query($on-palm) {
+    flex: 0 0 85vw;
+    min-width: 0;
+  }
+}
+
 .tnl-marquee-arrow {
   position: absolute;
   top: 50%;
