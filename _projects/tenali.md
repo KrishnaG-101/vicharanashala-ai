@@ -42,6 +42,8 @@ quote_author: "Said of Tenali Raman"
 
 ## **About**
 
+**Tenali** is named after the legendary **Tenali Raman** — the witty Indian scholar who outwitted entire courts with logic, not just facts. The platform sits on the same idea: math isn't memorised, it's *outwitted*.
+
 Every question is calibrated to the learner — the next one lands where the last one left you. Watch it work:
 
 <div class="tnl-demo" id="tnl-demo">
@@ -165,7 +167,34 @@ Every question is calibrated to the learner — the next one lands where the las
 })();
 </script>
 
-Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. Every question is generated on the fly — practice is infinite and never repeats. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.
+Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. It runs as one Node process on a single VPS — <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a> — serving the React app, the puzzle APIs, the JWT auth, the Socket.IO Battle Arena, and the multi-language code playground.
+
+**Why it works:** every question is generated on the fly from 91+ topics — arithmetic, geometry, algebra, calculus, vocab, GK — and there is no question database. Practice is infinite, never repeats, and the engine chooses the next question based on what the learner just showed they know. Difficulty isn't a setting; it's a per-learner trajectory.
+
+A learner moves through four stages every session:
+
+<div class="audience-grid">
+  <div class="audience-card">
+    <i class="ph ph-globe audience-card-icon"></i>
+    <div class="audience-card-title">1 · Open</div>
+    <p class="audience-card-desc">Land on the home grid at tenali.fun — 90+ colorful topic cards. Guest mode works fully; JWT login is optional.</p>
+  </div>
+  <div class="audience-card">
+    <i class="ph ph-target audience-card-icon"></i>
+    <div class="audience-card-title">2 · Pick</div>
+    <p class="audience-card-desc">Choose a mode: Goal Practice, Battle Arena, Detective Agency, Guided Journey, Random Mix, Custom Lesson, or a topic card.</p>
+  </div>
+  <div class="audience-card">
+    <i class="ph ph-play audience-card-icon"></i>
+    <div class="audience-card-title">3 · Play</div>
+    <p class="audience-card-desc">20 adaptive questions. Correct bumps adaptScore; wrong drops it. Tap "Solve" at any time for a step-by-step walkthrough.</p>
+  </div>
+  <div class="audience-card">
+    <i class="ph ph-trophy audience-card-icon"></i>
+    <div class="audience-card-title">4 · Earn</div>
+    <p class="audience-card-desc">Coins, XP, streak, badges. Progress saved in MongoDB — pick up tomorrow from where you stopped.</p>
+  </div>
+</div>
 
 <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px; margin-top:1.5rem;">
 
