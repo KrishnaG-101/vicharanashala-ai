@@ -557,7 +557,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">SR</span>
-      <img src="https://unavatar.io/linkedin/sudarshan-iyengar-3560b8145?fallback=false" alt="S. R. S. Iyengar" loading="lazy" onerror="this.remove();">
+      <img data-fallbacks="https://avatars.githubusercontent.com/sudarshansudarshan?v=4&size=200|https://ui-avatars.com/api/?name=S+R+S+Iyengar&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/sudarshan-iyengar-3560b8145?fallback=false" alt="S. R. S. Iyengar" loading="lazy">
     </div>
     <div class="tnl-core-name">S. R. S. Iyengar</div>
     <div class="tnl-core-role">Owner</div>
@@ -565,7 +565,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">JG</span>
-      <img src="https://unavatar.io/linkedin/jinal-gupta-220a652b6?fallback=false" alt="Jinal Gupta" loading="lazy" onerror="this.remove();">
+      <img data-fallbacks="https://avatars.githubusercontent.com/jgupta05072003-code?v=4&size=200|https://ui-avatars.com/api/?name=Jinal+Gupta&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/jinal-gupta-220a652b6?fallback=false" alt="Jinal Gupta" loading="lazy">
     </div>
     <div class="tnl-core-name">Jinal Gupta</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
@@ -573,7 +573,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">SH</span>
-      <img src="https://unavatar.io/linkedin/hamsalekha-s-a88ab59a?fallback=false" alt="S. Hamsalekha" loading="lazy" onerror="this.remove();">
+      <img data-fallbacks="https://avatars.githubusercontent.com/S-Hamsalekha-annamai?v=4&size=200|https://ui-avatars.com/api/?name=S+Hamsalekha&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/hamsalekha-s-a88ab59a?fallback=false" alt="S. Hamsalekha" loading="lazy">
     </div>
     <div class="tnl-core-name">S. Hamsalekha</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
@@ -581,7 +581,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">MA</span>
-      <img src="https://unavatar.io/linkedin/mudit-agrawal-16929337a?fallback=false" alt="Mudit Agrawal" loading="lazy" onerror="this.remove();">
+      <img data-fallbacks="https://avatars.githubusercontent.com/muditagrawal2007?v=4&size=200|https://ui-avatars.com/api/?name=Mudit+Agrawal&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/mudit-agrawal-16929337a?fallback=false" alt="Mudit Agrawal" loading="lazy">
     </div>
     <div class="tnl-core-name">Mudit Agrawal</div>
     <div class="tnl-core-role">Maintainer</div>
@@ -589,12 +589,43 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">KG</span>
-      <img src="https://unavatar.io/linkedin/krishna-gelra?fallback=false" alt="Krishna Gelra" loading="lazy" onerror="this.remove();">
+      <img data-fallbacks="https://avatars.githubusercontent.com/KrishnaG-101?v=4&size=200|https://ui-avatars.com/api/?name=Krishna+Gelra&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/krishna-gelra?fallback=false" alt="Krishna Gelra" loading="lazy">
     </div>
     <div class="tnl-core-name">Krishna Gelra</div>
     <div class="tnl-core-role">Maintainer</div>
   </div>
 </div>
+
+<script>
+(function() {
+  // Walk through fallback URLs on each core-team avatar img until one loads
+  document.querySelectorAll('.tnl-core-avatar img').forEach(function(img) {
+    var initials = img.previousElementSibling;
+    function tryNext() {
+      var fb = (img.dataset.fallbacks || '').split('|').filter(Boolean);
+      if (!fb.length) { initials.style.display = ''; return; }
+      var next = fb.shift();
+      img.dataset.fallbacks = fb.join('|');
+      img.src = next;
+    }
+    img.addEventListener('error', function() {
+      var fb = (img.dataset.fallbacks || '').split('|').filter(Boolean);
+      if (fb.length) {
+        tryNext();
+      } else {
+        // All fallbacks exhausted — remove the img so initials show
+        img.remove();
+      }
+    });
+    img.addEventListener('load', function() {
+      // Loaded successfully — hide initials underneath
+      if (initials && initials.classList.contains('tnl-core-initials')) {
+        initials.style.display = 'none';
+      }
+    });
+  });
+})();
+</script>
 
 <div class="tnl-marquee tnl-contrib-marquee" id="tnl-contrib-marquee">
   <div class="tnl-marquee-track" id="tnl-contrib-track">
