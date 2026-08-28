@@ -506,10 +506,13 @@ table {
 // ── Core team cards (S.R.S. Iyengar, Jinal Gupta, Hamsalekha, Mudit Agrawal) ──
 .tnl-core-team {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0.9rem;
   margin: 1.4rem 0 0.4rem;
 
+  @include media-query(900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   @include media-query($on-palm) {
     grid-template-columns: repeat(2, 1fr);
   }

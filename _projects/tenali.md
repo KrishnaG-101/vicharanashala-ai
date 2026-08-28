@@ -574,6 +574,11 @@ Eight ways to play. Same engine, different shape on top.
     <div class="tnl-core-name">Mudit Agrawal</div>
     <div class="tnl-core-role">Maintainer</div>
   </div>
+  <div class="tnl-core-card">
+    <div class="tnl-core-avatar">KG</div>
+    <div class="tnl-core-name">Krishna Gelra</div>
+    <div class="tnl-core-role">Maintainer</div>
+  </div>
 </div>
 
 <div class="tnl-marquee tnl-contrib-marquee" id="tnl-contrib-marquee">
@@ -593,7 +598,6 @@ Eight ways to play. Same engine, different shape on top.
     <span class="contributor-chip tnl-contrib-chip">Rukmender T</span>
     <span class="contributor-chip tnl-contrib-chip">Tanvish Desai</span>
     <span class="contributor-chip tnl-contrib-chip">Disha Bansal</span>
-    <span class="contributor-chip tnl-contrib-chip">Krishna Gelra</span>
     <span class="contributor-chip tnl-contrib-chip">Remy Baastin Rayappan</span>
     <span class="contributor-chip tnl-contrib-chip">Anshul Kanodia</span>
     <span class="contributor-chip tnl-contrib-chip">Vasuki</span>
