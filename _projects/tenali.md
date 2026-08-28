@@ -36,13 +36,13 @@ quote_author: "Said of Tenali Raman"
   <a href="https://tenali.fun" target="_blank" rel="noopener" class="product-try-link">Try it now ↗</a>
 </div>
 
-<p class="product-page-tagline">Adaptive math practice with 69 algorithmically generated puzzle types, live multiplayer, and step-by-step explanations — for learners, parents, and cohorts.</p>
+<p class="product-page-tagline">Adaptive math practice with 69 puzzle types, live multiplayer, and step-by-step explanations.</p>
 
 ---
 
 ## **The Adaptive Engine**
 
-Tenali's defining feature is the difficulty engine that sits underneath every question. Watch it work — the score shifts with every answer, the band marker moves with it, and the next question is calibrated to wherever you are.
+Every question is calibrated to the learner. Watch the score shift — the next question lands where the last one left you.
 
 <div class="tnl-demo" id="tnl-demo">
   <div class="tnl-demo-row">
@@ -170,7 +170,7 @@ Tenali's defining feature is the difficulty engine that sits underneath every qu
 ## **About**
 
 <div class="split-media">
-<p>Tenali covers the full journey from foundational numeracy through to algebra, using a game-like structure that keeps learners invested. Every question is generated on the fly — no question database — so practice is infinite and never repeats. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.</p>
+<p>Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. Every question is generated on the fly — practice is infinite and never repeats. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.</p>
 
 <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px;">
 </div>
@@ -179,40 +179,40 @@ Tenali's defining feature is the difficulty engine that sits underneath every qu
 
 ## **The Problem**
 
-In most classrooms, math anxiety starts early and compounds. Worksheets pile up, drills repeat, and the gap between what a learner can do and what they believe they can do widens. The platforms that try to fix this usually gamify trivia — points, streaks, badges — without addressing the underlying question: *is the next question the right one for this learner right now?*
+Math anxiety starts early and compounds. Most platforms gamify trivia — points, streaks, badges — without asking the real question: *is the next question the right one for this learner right now?*
 
 ---
 
 ## **What We Built**
 
-A math learning surface where the difficulty adjusts to the learner, not the other way around. Pick a topic, get a question; answer it, and the next one is calibrated to what you just showed you know. The same engine runs across all 91+ puzzle topics — arithmetic, geometry, algebra, calculus, even vocab and GK — so practice stays coherent no matter where a learner starts.
+Pick a topic, get a question; the next one is calibrated to what you just showed you know. One engine runs across all 91+ puzzle topics — arithmetic, geometry, algebra, calculus, vocab, GK.
 
 <div class="shot-carousel" id="tenali-shot-carousel">
   <div class="shot-carousel-viewport">
-    <div class="shot-slide active">
-      <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid">
-      <figcaption>Home grid — 90+ topics color-coded by domain (blue arithmetic, green geometry, purple algebra, orange games).</figcaption>
-    </div>
-    <div class="shot-slide">
-      <img src="{{ site.baseurl }}/assets/images/tenali/goal-practice.png" alt="Tenali goal practice — Tables Desk">
-      <figcaption>Goal practice — pick a target score, hit it before the session ends.</figcaption>
-    </div>
-    <div class="shot-slide">
-      <img src="{{ site.baseurl }}/assets/images/tenali/solve-explanation.png" alt="Tenali Tatsavit — Fit the Line">
-      <figcaption>Tatsavit — interactive line-fitter for exploring slope and intercept by feel.</figcaption>
-    </div>
-    <div class="shot-slide">
-      <img src="{{ site.baseurl }}/assets/images/tenali/battle-arena.png" alt="Tenali Battle Arena — live 1v1 duel">
-      <figcaption>Battle Arena — live 1-vs-1 fastest-finger duels over Socket.IO.</figcaption>
-    </div>
-    <div class="shot-slide">
-      <img src="{{ site.baseurl }}/assets/images/tenali/detective-agency.png" alt="Tenali Detective Agency — chained mystery">
-      <figcaption>Detective Agency — story-driven mystery puzzles with chained clues.</figcaption>
-    </div>
-    <div class="shot-slide">
-      <img src="{{ site.baseurl }}/assets/images/tenali/guided-journey.png" alt="Tenali Guided Learning Journey">
-      <figcaption>Guided Journey — linear curriculum; the next concept unlocks only after the previous is mastered.</figcaption>
-    </div>
+<div class="shot-slide active">
+    <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid">
+    <figcaption>Home grid — 90+ topics, color-coded by domain.</figcaption>
+  </div>
+  <div class="shot-slide">
+    <img src="{{ site.baseurl }}/assets/images/tenali/goal-practice.png" alt="Tenali goal practice — Tables Desk">
+    <figcaption>Goal practice — pick a target score, hit it before time runs out.</figcaption>
+  </div>
+  <div class="shot-slide">
+    <img src="{{ site.baseurl }}/assets/images/tenali/solve-explanation.png" alt="Tenali Tatsavit — Fit the Line">
+    <figcaption>Tatsavit — explore slope and intercept by feel.</figcaption>
+  </div>
+  <div class="shot-slide">
+    <img src="{{ site.baseurl }}/assets/images/tenali/battle-arena.png" alt="Tenali Battle Arena — live 1v1 duel">
+    <figcaption>Battle Arena — live 1v1 fastest-finger duels.</figcaption>
+  </div>
+  <div class="shot-slide">
+    <img src="{{ site.baseurl }}/assets/images/tenali/detective-agency.png" alt="Tenali Detective Agency — chained mystery">
+    <figcaption>Detective Agency — chained clues, procedurally generated.</figcaption>
+  </div>
+  <div class="shot-slide">
+    <img src="{{ site.baseurl }}/assets/images/tenali/guided-journey.png" alt="Tenali Guided Learning Journey">
+    <figcaption>Guided Journey — next concept unlocks only after mastery.</figcaption>
+  </div>
     <button class="shot-carousel-arrow shot-carousel-prev" aria-label="Previous screen"><i class="ph ph-caret-left"></i></button>
     <button class="shot-carousel-arrow shot-carousel-next" aria-label="Next screen"><i class="ph ph-caret-right"></i></button>
   </div>
@@ -257,43 +257,43 @@ A math learning surface where the difficulty adjusts to the learner, not the oth
 <div class="audience-grid">
   <div class="audience-card">
     <i class="ph ph-chart-line-up audience-card-icon"></i>
-    <div class="audience-card-title">Adaptive Difficulty Engine</div>
-    <p class="audience-card-desc">Each quiz instance maintains a float adaptScore (0 – 3). Correct answers add +0.15 to +0.5; wrong answers subtract −0.4 to −0.6. The score maps to bands easy → medium → hard → extrahard, which drives the difficulty parameter for every new question.</p>
+    <div class="audience-card-title">Adaptive Difficulty</div>
+    <p class="audience-card-desc">A float adaptScore (0–3) shifts with every answer. Maps to bands easy → medium → hard → extrahard, driving the difficulty of every new question.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-swords audience-card-icon"></i>
     <div class="audience-card-title">Battle Arena</div>
-    <p class="audience-card-desc">Live 1-vs-1 fastest-finger duels via Socket.IO. Two players see the same question; the first correct answer wins the round. Streak-based matchmaking.</p>
+    <p class="audience-card-desc">Live 1v1 fastest-finger duels over Socket.IO. Same question, first correct answer wins.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-magnifying-glass audience-card-icon"></i>
     <div class="audience-card-title">Detective Agency</div>
-    <p class="audience-card-desc">Story-driven mystery puzzles — each case is a chain of math clues; solving one unlocks the next. Hundreds of procedurally generated mysteries.</p>
+    <p class="audience-card-desc">Chain of math clues; solving one unlocks the next. Hundreds of procedurally generated cases.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-lightbulb audience-card-icon"></i>
     <div class="audience-card-title">Solve-for-Explanation</div>
-    <p class="audience-card-desc">Wrap any POST *-api/check call with { solve: true } and the server returns a step-by-step walkthrough from generateExplanation() — covers 50+ puzzle types.</p>
+    <p class="audience-card-desc">Send <code>{ solve: true }</code> on any POST *-api/check. Server returns a step-by-step walkthrough — covers 50+ puzzle types.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-graduation-cap audience-card-icon"></i>
-    <div class="audience-card-title">Guided Learning Journey</div>
-    <p class="audience-card-desc">Linear curriculum with concept checkpoints. Server enforces progression via UserTopicProgress — locked → blue → bronze → silver → gold.</p>
+    <div class="audience-card-title">Guided Journey</div>
+    <p class="audience-card-desc">Linear curriculum with concept checkpoints. Server enforces progression: locked → blue → bronze → silver → gold.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-flask audience-card-icon"></i>
     <div class="audience-card-title">Concept Lab</div>
-    <p class="audience-card-desc">A 5-stage concept mastery loop — Predict → Grid → Guided → Independent → Review — for moving from intuition to fluency on a single concept.</p>
+    <p class="audience-card-desc">5-stage mastery loop — Predict → Grid → Guided → Independent → Review — from intuition to fluency.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-puzzle-piece audience-card-icon"></i>
     <div class="audience-card-title">Spaced Repetition</div>
-    <p class="audience-card-desc">Recently-missed questions are promoted back into rotation by lib/spacingLadder.js, driven by Bayesian Knowledge Tracing (lib/bkt.js).</p>
+    <p class="audience-card-desc">Recently-missed questions are promoted back into rotation, driven by Bayesian Knowledge Tracing.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-shield-check audience-card-icon"></i>
     <div class="audience-card-title">Proctoring</div>
-    <p class="audience-card-desc">Optional exam-mode supervision via face-api.js — focus score, tab switches, look-aways — surfaced to a staff-only dashboard. Watchful without being intrusive.</p>
+    <p class="audience-card-desc">Optional exam-mode supervision via face-api.js — focus score, tab switches, look-aways — to a staff-only dashboard.</p>
   </div>
 </div>
 
@@ -302,27 +302,27 @@ A math learning surface where the difficulty adjusts to the learner, not the oth
     <div class="audience-card">
       <i class="ph ph-trophy audience-card-icon"></i>
       <div class="audience-card-title">Gamification</div>
-      <p class="audience-card-desc">Coins, XP, streak, pinned badges, album-style Collections. Earned on every correct answer; persisted in MongoDB for next time.</p>
+      <p class="audience-card-desc">Coins, XP, streak, pinned badges, album-style Collections. Persisted across sessions.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-shuffle audience-card-icon"></i>
       <div class="audience-card-title">Random Mix &amp; Custom Lesson</div>
-      <p class="audience-card-desc">Random Mix pulls a question from your weakest areas. Custom Lesson lets you pick exactly which topics appear and how many of each.</p>
+      <p class="audience-card-desc">Random Mix pulls from your weakest areas. Custom Lesson lets you pick exactly which topics and counts.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-terminal-window audience-card-icon"></i>
       <div class="audience-card-title">Code Playground</div>
-      <p class="audience-card-desc">Run code in 50+ languages via /api/playground2/run. Python-Tutor-style visualizer with code + arrow + memory boxes.</p>
+      <p class="audience-card-desc">Run code in 50+ languages. Python-Tutor-style visualizer with code + arrow + memory boxes.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-translate audience-card-icon"></i>
       <div class="audience-card-title">i18n &amp; RTL</div>
-      <p class="audience-card-desc">Built-in locale switching via /src/locales for multi-language classrooms, including right-to-left scripts.</p>
+      <p class="audience-card-desc">Built-in locale switching for multi-language classrooms, including right-to-left scripts.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-keyboard audience-card-icon"></i>
       <div class="audience-card-title">Accessibility</div>
-      <p class="audience-card-desc">Keyboard navigation (1–4 / a–d for MCQs, Enter to advance), ARIA roles, high-contrast toggle, reduced-motion friendly animations.</p>
+      <p class="audience-card-desc">Keyboard navigation, ARIA roles, high-contrast toggle, reduced-motion friendly animations.</p>
     </div>
   </div>
 </div>
@@ -360,7 +360,7 @@ A math learning surface where the difficulty adjusts to the learner, not the oth
 
 ## **Seven Modes at a Glance**
 
-Seven ways to play. The same engine runs underneath — different shape on top.
+Seven ways to play. Same engine, different shape on top.
 
 <div class="scenario-tabs">
   <div class="scenario-tab-bar">
@@ -375,37 +375,37 @@ Seven ways to play. The same engine runs underneath — different shape on top.
 
   <div class="scenario-panel active" id="tnl-mode-goal">
     <div class="scenario-panel-head"><i class="ph ph-target scenario-icon"></i><span class="scenario-title">Goal Practice</span></div>
-    <p>Pick a target score on a chosen topic and chase it. The engine adapts as you go — too easy, the next question steps up; too hard, it eases back so you keep moving.</p>
+    <p>Pick a target score on a topic and chase it. The engine adapts as you go.</p>
     <span class="scenario-stat"><i class="ph ph-trend-up"></i> Hit your target or beat it</span>
   </div>
   <div class="scenario-panel" id="tnl-mode-battle">
     <div class="scenario-panel-head"><i class="ph ph-swords scenario-icon"></i><span class="scenario-title">Battle Arena</span></div>
-    <p>Live fastest-finger duels. Two players, one question, the first correct answer wins the round. Streaks build ratings; ratings drive matchmaking.</p>
+    <p>Two players, one question, first correct answer wins. Streaks drive matchmaking.</p>
     <span class="scenario-stat"><i class="ph ph-globe"></i> Multiplayer over Socket.IO</span>
   </div>
   <div class="scenario-panel" id="tnl-mode-detective">
     <div class="scenario-panel-head"><i class="ph ph-magnifying-glass scenario-icon"></i><span class="scenario-title">Detective Agency</span></div>
-    <p>Story-driven mysteries. Each case is a chain of math clues — solving one unlocks the next. Hundreds of procedurally generated cases.</p>
+    <p>Chained math clues; solving one unlocks the next. Hundreds of cases, procedurally generated.</p>
     <span class="scenario-stat"><i class="ph ph-path"></i> Chained clue progression</span>
   </div>
   <div class="scenario-panel" id="tnl-mode-riddles">
     <div class="scenario-panel-head"><i class="ph ph-lightbulb scenario-icon"></i><span class="scenario-title">Math Riddles</span></div>
-    <p>Find the hidden rule in a puzzle. 48 riddles — find-rule, sequence, logic, image — designed to reward pattern recognition over speed.</p>
+    <p>Find the hidden rule. 48 riddles — find-rule, sequence, logic, image.</p>
     <span class="scenario-stat"><i class="ph ph-shuffle"></i> 48 hand-authored riddles</span>
   </div>
   <div class="scenario-panel" id="tnl-mode-journey">
     <div class="scenario-panel-head"><i class="ph ph-graduation-cap scenario-icon"></i><span class="scenario-title">Guided Learning Journey</span></div>
-    <p>Linear curriculum with concept checkpoints. The next concept unlocks only after the previous one is mastered — bronze unlocks silver unlocks gold.</p>
+    <p>Linear curriculum with concept checkpoints. Next concept unlocks only after mastery.</p>
     <span class="scenario-stat"><i class="ph ph-lock-key"></i> Server-enforced progression</span>
   </div>
   <div class="scenario-panel" id="tnl-mode-random">
     <div class="scenario-panel-head"><i class="ph ph-shuffle scenario-icon"></i><span class="scenario-title">Random Mix</span></div>
-    <p>A quiz that adapts to your weakest topics. Pulls from wherever your adaptScore is lowest, so practice lands where it matters.</p>
+    <p>Pulls from wherever your adaptScore is lowest.</p>
     <span class="scenario-stat"><i class="ph ph-chart-line-up"></i> Targets weak areas</span>
   </div>
   <div class="scenario-panel" id="tnl-mode-custom">
     <div class="scenario-panel-head"><i class="ph ph-sliders scenario-icon"></i><span class="scenario-title">Custom Lesson</span></div>
-    <p>Hand-pick topics and question counts. Build the exact practice set you want — ten of one topic, twenty of another, no surprises.</p>
+    <p>Hand-pick topics and question counts.</p>
     <span class="scenario-stat"><i class="ph ph-pencil"></i> You decide the mix</span>
   </div>
 </div>
@@ -423,38 +423,38 @@ function showTnlMode(id, btn) {
 
 ## **The 91 Puzzles**
 
-Every puzzle type shares the same two-route contract — `GET /<type>-api/question` and `POST /<type>-api/check`. To fetch a step-by-step explanation, send `{ solve: true }` in the POST body. Categories:
+Every puzzle type shares one contract — `GET /<type>-api/question` and `POST /<type>-api/check`. Send `{ solve: true }` in the POST body for a step-by-step explanation.
 
 <div class="audience-grid">
   <div class="audience-card">
     <i class="ph ph-plus-circle audience-card-icon"></i>
-    <div class="audience-card-title">Arithmetic &amp; Number</div>
-    <p class="audience-card-desc">20 types — Addition, Column ops, Decimals, Fractions, Indices, Surds, Sequences, Ratio, Percentages, Profit &amp; Loss, Banking, GST.</p>
+    <div class="audience-card-title">Arithmetic &amp; Number · 20</div>
+    <p class="audience-card-desc">Addition, Column ops, Decimals, Fractions, Indices, Surds, Sequences, Ratio, Percentages, Profit &amp; Loss, Banking, GST.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-coins audience-card-icon"></i>
-    <div class="audience-card-title">Commerce &amp; Statistics</div>
-    <p class="audience-card-desc">8 types — Shares &amp; Dividends, Rounding, Standard Form, SDT, Number Bases, HCF &amp; LCM, Prime Factors, Bounds.</p>
+    <div class="audience-card-title">Commerce &amp; Stats · 8</div>
+    <p class="audience-card-desc">Shares &amp; Dividends, Rounding, Standard Form, SDT, Number Bases, HCF &amp; LCM, Prime Factors, Bounds.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-function audience-card-icon"></i>
-    <div class="audience-card-title">Algebra</div>
-    <p class="audience-card-desc">15 types — Variation, Linear &amp; Simultaneous, Quadratics, Polynomials, Remainder &amp; Binomial, Functions, plus multiple MCQ gyms.</p>
+    <div class="audience-card-title">Algebra · 15</div>
+    <p class="audience-card-desc">Variation, Linear &amp; Simultaneous, Quadratics, Polynomials, Remainder &amp; Binomial, Functions, plus MCQ gyms.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-shapes audience-card-icon"></i>
-    <div class="audience-card-title">Geometry &amp; Trig</div>
-    <p class="audience-card-desc">14 types — Trig, Inverse Trig, Circular Measure, Inequalities, Coordinate Geometry, Probability, Sets, Bearings, Matrices.</p>
+    <div class="audience-card-title">Geometry &amp; Trig · 14</div>
+    <p class="audience-card-desc">Trig, Inverse Trig, Circular Measure, Inequalities, Coordinate Geometry, Probability, Sets, Bearings, Matrices.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-grid-four audience-card-icon"></i>
-    <div class="audience-card-title">Linear Algebra &amp; Vectors</div>
-    <p class="audience-card-desc">6 types — LA Mission Quiz, Vectors, Dot Products, Transformations, Mensuration. Plus the curated 56-mission Linear Algebra Lab.</p>
+    <div class="audience-card-title">Linear Algebra · 6</div>
+    <p class="audience-card-desc">LA Mission Quiz, Vectors, Dot Products, Transformations, Mensuration.</p>
   </div>
   <div class="audience-card">
     <i class="ph ph-gamepad audience-card-icon"></i>
-    <div class="audience-card-title">Calculus &amp; Games</div>
-    <p class="audience-card-desc">15+ types — Differentiation, Integration, Limits, Conics, Sudoku, Darts, Riddles, Curiosity, plus Conceptual, Vocabulary (7,662 words) and GK (991 questions).</p>
+    <div class="audience-card-title">Calculus &amp; Games · 15+</div>
+    <p class="audience-card-desc">Differentiation, Integration, Limits, Conics, Sudoku, Darts, Riddles, Curiosity, plus Vocabulary (7,662) and GK (991).</p>
   </div>
 </div>
 
@@ -462,13 +462,13 @@ Every puzzle type shares the same two-route contract — `GET /<type>-api/questi
 
 ## **Architecture**
 
-React 19 single-page app served by a single Express 5 process (Mongoose 9 + MongoDB, Socket.IO 4 for live multiplayer). JWT auth, bcrypt 10 rounds, express-rate-limit, CORS allowlist. Frontend on Vite 8 with framer-motion, Three.js, mafs, and face-api.js. One VPS, one Node process, no question database — every question is generated on the fly.
+React 19 SPA, Express 5 + MongoDB, Socket.IO 4 for multiplayer, JWT auth. Frontend on Vite 8 with framer-motion, Three.js, mafs, face-api.js. One VPS, one Node process — every question is generated on the fly.
 
 ---
 
 ## **In the Room**
 
-Tenali runs inside the platforms learners are already using. No separate app, no extra login. The experience changes from inside.
+Tenali runs inside the platforms learners already use. No separate app, no extra login.
 
 <div class="scenario-tabs">
   <div class="scenario-tab-bar">
@@ -479,18 +479,17 @@ Tenali runs inside the platforms learners are already using. No separate app, no
 
   <div class="scenario-panel active" id="tnl-room-learners">
     <div class="scenario-panel-head"><i class="ph ph-student scenario-icon"></i><span class="scenario-title">Learners</span></div>
-    <p>The hardest part of math isn't the math — it's staying engaged long enough to get past the awkward middle. Tenali keeps practice moving: the next question lands where the last one left you, and the explanation is always one tap away.</p>
-    <p>Pick a topic, play 20 questions, see the band move. Pick up tomorrow from where you stopped.</p>
+    <p>The next question lands where the last one left you; the explanation is one tap away.</p>
     <span class="scenario-stat"><i class="ph ph-trend-up"></i> Practice that adjusts to you</span>
   </div>
   <div class="scenario-panel" id="tnl-room-parents">
     <div class="scenario-panel-head"><i class="ph ph-house-line scenario-icon"></i><span class="scenario-title">Parents</span></div>
-    <p>Open the parent view, see what your child practised today, where the bands sit, and which topics still glow red. No login dance, no app to install — just a glance.</p>
+    <p>See what your child practised, where bands sit, which topics still glow red. No login dance, no app to install.</p>
     <span class="scenario-stat"><i class="ph ph-eye"></i> Effort made visible</span>
   </div>
   <div class="scenario-panel" id="tnl-room-schools">
     <div class="scenario-panel-head"><i class="ph ph-buildings scenario-icon"></i><span class="scenario-title">Schools &amp; Programmes</span></div>
-    <p>Run a cohort — an internship, a summer school, a numeracy intervention. The proctoring layer keeps tabs on engagement; the leaderboards make effort visible without making it a competition.</p>
+    <p>Run a cohort — internship, summer school, numeracy intervention. Proctoring + leaderboards surface engagement without making it a competition.</p>
     <span class="scenario-stat"><i class="ph ph-chart-bar"></i> Cohort-level signals</span>
   </div>
 </div>
@@ -507,8 +506,6 @@ function showTnlRoom(id, btn) {
 ---
 
 ## **By the Numbers**
-
-Tenali is built and kept running by a community of student and staff contributors.
 
 <div class="stat-row will-animate" id="tenali-stat-row">
   <div class="stat"><span class="stat-number">69</span><span class="stat-label">Puzzle Families</span></div>
@@ -559,8 +556,6 @@ Tenali is built and kept running by a community of student and staff contributor
 ---
 
 ## **Contributors**
-
-Tenali is built and maintained by a community of student and staff contributors.
 
 <div class="contributor-list">
   <span class="contributor-chip">S. R. S. Iyengar</span>
