@@ -44,7 +44,7 @@ quote_author: "Said of Tenali Raman"
 
 Every question is calibrated to the learner — the next one lands where the last one left you.
 
-Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. It runs as one Node process on a single VPS — <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a> — serving the React app, the puzzle APIs, the JWT auth, the Socket.IO Battle Arena, and the multi-language code playground.
+Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.
 
 **Why it works:** every question is generated on the fly from 91+ topics — arithmetic, geometry, algebra, calculus, vocab, GK — and there is no question database. Practice is infinite, never repeats, and the engine chooses the next question based on what the learner just showed they know. Difficulty isn't a setting; it's a per-learner trajectory.
 
