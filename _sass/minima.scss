@@ -539,8 +539,8 @@ table {
 }
 
 .tnl-core-avatar {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, $brand-color 0%, #b85a00 100%);
   color: #fff;
@@ -551,8 +551,29 @@ table {
   font-weight: 600;
   letter-spacing: 0.04em;
   margin-bottom: 0.7rem;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
               box-shadow 0.3s ease;
+
+  // Real GitHub avatar — hidden by default, shown on onload
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: none;
+    z-index: 1;
+  }
+
+  // Initials sit underneath the img (z-index 0)
+  .tnl-core-initials {
+    position: relative;
+    z-index: 0;
+    line-height: 1;
+  }
 }
 
 .tnl-core-card:hover .tnl-core-avatar {
