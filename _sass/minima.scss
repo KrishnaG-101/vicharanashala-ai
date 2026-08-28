@@ -2888,7 +2888,60 @@ $fln-accent:    #e07020;   // brand orange (single accent)
 .tnl-marquee-arrow--left  { left: 0.6rem; }
 .tnl-marquee-arrow--right { right: 0.6rem; }
 
+// ── Tenali product screenshots — entrance + hover lift + shine sweep ──
+.tnl-screenshot {
+  display: block;
+  width: 100%;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  // Start invisible + nudged down; animation reveals on .is-in
+  opacity: 0;
+  transform: translateY(18px);
+  transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.35s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+
+  &.is-in {
+    opacity: 1;
+    transform: translateY(0);
+    animation: tnl-shot-rise 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  }
+
+  // Shine sweep on hover — a diagonal gloss that crosses the image
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg,
+      transparent 30%,
+      rgba(255,255,255,0.35) 45%,
+      rgba(255,255,255,0.55) 50%,
+      rgba(255,255,255,0.35) 55%,
+      transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+    pointer-events: none;
+  }
+
+  &:hover::after { transform: translateX(120%); }
+}
+
+@keyframes tnl-shot-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 // ── Reduced-motion respect ──
 @media (prefers-reduced-motion: reduce) {
   // (no per-class rules currently — left empty for future marquee/scroll tweaks)
+  .tnl-screenshot { opacity: 1; transform: none; }
+  .tnl-screenshot::after { display: none; }
 }

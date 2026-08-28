@@ -111,7 +111,27 @@ A learner moves through four stages every session:
 })();
 </script>
 
-<img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px; margin-top:1.5rem;">
+<img class="tnl-screenshot" src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy">
+
+<script>
+(function() {
+  // Reveal .tnl-screenshot elements on first scroll into view
+  var shots = document.querySelectorAll('.tnl-screenshot');
+  if (!shots.length || !('IntersectionObserver' in window)) {
+    shots.forEach(function(s) { s.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  shots.forEach(function(s) { io.observe(s); });
+})();
+</script>
 
 ---
 
