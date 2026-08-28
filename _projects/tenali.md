@@ -320,9 +320,9 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
 
 ---
 
-## **Seven Modes at a Glance**
+## **Eight Modes at a Glance**
 
-Seven ways to play. Same engine, different shape on top.
+Eight ways to play. Same engine, different shape on top.
 
 <div class="scenario-tabs">
   <div class="scenario-tab-bar">
@@ -333,6 +333,7 @@ Seven ways to play. Same engine, different shape on top.
     <button class="scenario-tab" onclick="showTnlMode('journey', this)">Guided Journey</button>
     <button class="scenario-tab" onclick="showTnlMode('random', this)">Random Mix</button>
     <button class="scenario-tab" onclick="showTnlMode('custom', this)">Custom Lesson</button>
+    <button class="scenario-tab" onclick="showTnlMode('lal', this)">Linear Algebra Lab</button>
   </div>
 
   <div class="scenario-panel active" id="tnl-mode-goal">
@@ -369,6 +370,11 @@ Seven ways to play. Same engine, different shape on top.
     <div class="scenario-panel-head"><i class="ph ph-sliders scenario-icon"></i><span class="scenario-title">Custom Lesson</span></div>
     <p>Hand-pick topics and question counts.</p>
     <span class="scenario-stat"><i class="ph ph-pencil"></i> You decide the mix</span>
+  </div>
+  <div class="scenario-panel" id="tnl-mode-lal">
+    <div class="scenario-panel-head"><i class="ph ph-function scenario-icon"></i><span class="scenario-title">Linear Algebra Lab</span></div>
+    <p>56 missions across 6 modules — ratios on a plane, coordinate geometry, linear transforms, matrices, determinants, PageRank. Each question is a story.</p>
+    <span class="scenario-stat"><i class="ph ph-chart-network"></i> 6 modules · 4 difficulty bands</span>
   </div>
 </div>
 
