@@ -14,8 +14,6 @@ quote_author: "Said of Tenali Raman"
   @media (max-width: 600px) {
     .page-content .wrapper hr { margin: 1.4rem 0; }
     .page-content .wrapper h2 { margin-top: 1.3rem; }
-    .page-content .wrapper .tnl-demo { padding: 1rem; }
-    .page-content .wrapper .tnl-adapter { height: 38px; }
     .page-content .wrapper .tnl-modes { grid-template-columns: 1fr; }
     .page-content .wrapper .shot-carousel { margin: 1rem 0 1.2rem; }
     .page-content .wrapper .stat-row { gap: 1.5rem; padding: 1.2rem 0; }
@@ -44,128 +42,7 @@ quote_author: "Said of Tenali Raman"
 
 **Tenali** is named after the legendary **Tenali Raman** — the witty Indian scholar who outwitted entire courts with logic, not just facts. The platform sits on the same idea: math isn't memorised, it's *outwitted*.
 
-Every question is calibrated to the learner — the next one lands where the last one left you. Watch it work:
-
-<div class="tnl-demo" id="tnl-demo">
-  <div class="tnl-demo-row">
-    <div class="tnl-question-card">
-      <div class="tnl-question-meta">Q 4 · LINEAR EQUATIONS</div>
-      <div class="tnl-question-text" id="tnl-qtext">Solve for x:  3x − 7 = 5x + 11</div>
-      <div class="tnl-input-row">
-        <input type="text" class="tnl-input" id="tnl-input" value="x = −9" readonly>
-        <button class="tnl-btn" id="tnl-check">Check</button>
-      </div>
-    </div>
-    <div class="tnl-adapter-wrap">
-      <div class="tnl-adapter-label">AdaptScore <span id="tnl-score">1.20</span></div>
-      <div class="tnl-adapter">
-        <div class="tnl-adapter-band" data-band="0"></div>
-        <div class="tnl-adapter-band" data-band="1"></div>
-        <div class="tnl-adapter-band" data-band="2"></div>
-        <div class="tnl-adapter-band" data-band="3"></div>
-        <div class="tnl-adapter-marker" id="tnl-marker"></div>
-      </div>
-      <div class="tnl-adapter-names">
-        <span>easy</span><span>medium</span><span>hard</span><span>✦</span>
-      </div>
-      <div class="tnl-feed" id="tnl-feed"></div>
-    </div>
-  </div>
-  <div class="tnl-demo-caption" id="tnl-caption">Watch how the score shifts with every answer.</div>
-</div>
-
-<script>
-(function() {
-  var root = document.getElementById('tnl-demo');
-  if (!root) return;
-  var marker = document.getElementById('tnl-marker');
-  var scoreEl = document.getElementById('tnl-score');
-  var feed = document.getElementById('tnl-feed');
-  var caption = document.getElementById('tnl-caption');
-  var input = document.getElementById('tnl-input');
-  var btn = document.getElementById('tnl-check');
-  var qtext = document.getElementById('tnl-qtext');
-  var bands = root.querySelectorAll('.tnl-adapter-band');
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  var score = 1.20;
-  var beat = 0;
-
-  function bandFor(s) {
-    if (s < 0.75) return 0;
-    if (s < 1.5)  return 1;
-    if (s < 2.25) return 2;
-    return 3;
-  }
-
-  function positionMarker() {
-    var pct = Math.max(0, Math.min(3, score)) / 3 * 100;
-    marker.style.left = 'calc(' + pct + '% - 7px)';
-    bands.forEach(function(b) { b.classList.remove('is-active'); });
-    bands[bandFor(score)].classList.add('is-active');
-    scoreEl.textContent = score.toFixed(2);
-  }
-
-  function showFeed(text, good) {
-    if (reduceMotion) return;
-    feed.textContent = text;
-    feed.className = 'tnl-feed ' + (good ? 'is-good' : 'is-bad') + ' is-visible';
-    setTimeout(function() { feed.classList.remove('is-visible'); }, 1400);
-  }
-
-  function tick() {
-    if (reduceMotion) return;
-    scoreEl.classList.remove('is-tick');
-    void scoreEl.offsetWidth;
-    scoreEl.classList.add('is-tick');
-  }
-
-  function applyDelta(d, text, good, nextScore) {
-    score = Math.max(0, Math.min(3, nextScore));
-    positionMarker();
-    tick();
-    showFeed(text, good);
-  }
-
-  positionMarker();
-
-  btn.addEventListener('click', function() {
-    beat++;
-    if (beat === 1) {
-      input.value = 'x = 4';
-      input.classList.add('is-wrong');
-      applyDelta(-0.55, '−0.55', false, 0.65);
-      caption.textContent = 'Wrong answer — score drops, band shifts back.';
-    } else if (beat === 2) {
-      input.value = 'x = −9';
-      input.classList.remove('is-wrong');
-      input.classList.add('is-right');
-      applyDelta(0.95, '+0.95', true, 1.60);
-      caption.textContent = 'Correct — score climbs, next question is harder.';
-    } else if (beat === 3) {
-      qtext.textContent = 'Solve:  x² − 5x + 6 = 0';
-      input.value = 'x = 2, 3';
-      input.classList.remove('is-right');
-      applyDelta(1.05, '+1.05', true, 2.65);
-      caption.textContent = 'Easy in. Extra-hard out. Every question calibrated to you.';
-    } else {
-      // loop: subtle drift
-      var drift = (Math.random() - 0.5) * 0.4;
-      applyDelta(drift, (drift > 0 ? '+' : '') + drift.toFixed(2), drift > 0, Math.max(0.4, Math.min(2.9, score + drift)));
-    }
-  });
-
-  // Auto-play once on load (skip if reduced motion)
-  if (!reduceMotion) {
-    setTimeout(function() { btn.click(); }, 1400);
-    setTimeout(function() { btn.click(); }, 3200);
-    setTimeout(function() { btn.click(); }, 5000);
-    setInterval(function() {
-      if (beat >= 3) btn.click();
-    }, 6500);
-  }
-})();
-</script>
+Every question is calibrated to the learner — the next one lands where the last one left you.
 
 Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. It runs as one Node process on a single VPS — <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a> — serving the React app, the puzzle APIs, the JWT auth, the Socket.IO Battle Arena, and the multi-language code playground.
 
