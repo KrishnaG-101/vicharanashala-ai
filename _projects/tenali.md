@@ -325,6 +325,8 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
 Eight ways to play. Same engine, different shape on top.
 
 <div class="tnl-marquee tnl-marquee--2" id="tnl-modes-marquee">
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--left" id="tnl-modes-left" aria-label="Scroll modes left"><i class="ph ph-caret-left"></i></button>
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--right" id="tnl-modes-right" aria-label="Scroll modes right"><i class="ph ph-caret-right"></i></button>
   <div class="tnl-marquee-track" id="tnl-modes-track">
     <div class="audience-card">
       <i class="ph ph-target audience-card-icon"></i>
@@ -380,6 +382,8 @@ Eight ways to play. Same engine, different shape on top.
 <script>
 (function() {
   var track = document.getElementById('tnl-modes-track');
+  var leftBtn = document.getElementById('tnl-modes-left');
+  var rightBtn = document.getElementById('tnl-modes-right');
   if (!track) return;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -391,6 +395,7 @@ Eight ways to play. Same engine, different shape on top.
   var position = 0;
   var velocity = reduceMotion ? 0 : 0.4;
   var paused = false;
+  var resumeTimer = null;
 
   function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
 
@@ -404,6 +409,24 @@ Eight ways to play. Same engine, different shape on top.
   }
   apply();
   requestAnimationFrame(frame);
+
+  function cardStep() {
+    var card = track.querySelector('.audience-card');
+    return card ? card.getBoundingClientRect().width + 16 : 320;
+  }
+
+  function nudge(direction) {
+    position += direction * cardStep(); // direction: -1 = scroll left, +1 = scroll right
+    if (-position >= halfWidth) position += halfWidth;
+    if (position > 0) position -= halfWidth;
+    apply();
+    paused = true;
+    if (resumeTimer) clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() { paused = false; }, 1800);
+  }
+
+  if (leftBtn)  leftBtn.addEventListener('click',  function() { nudge(-1); });
+  if (rightBtn) rightBtn.addEventListener('click', function() { nudge(1); });
 
   var marquee = track.parentElement;
   if (marquee) {
