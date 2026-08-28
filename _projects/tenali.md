@@ -557,7 +557,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">SR</span>
-      <img src="https://avatars.githubusercontent.com/sudarshansudarshan?v=4&size=200" alt="S. R. S. Iyengar" loading="lazy" onerror="this.remove();">
+      <img src="https://unavatar.io/linkedin/sudarshan-iyengar-3560b8145?fallback=false" alt="S. R. S. Iyengar" loading="lazy" onerror="this.remove();">
     </div>
     <div class="tnl-core-name">S. R. S. Iyengar</div>
     <div class="tnl-core-role">Owner</div>
@@ -565,7 +565,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">JG</span>
-      <img src="https://avatars.githubusercontent.com/jgupta05072003-code?v=4&size=200" alt="Jinal Gupta" loading="lazy" onerror="this.remove();">
+      <img src="https://unavatar.io/linkedin/jinal-gupta-220a652b6?fallback=false" alt="Jinal Gupta" loading="lazy" onerror="this.remove();">
     </div>
     <div class="tnl-core-name">Jinal Gupta</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
@@ -573,7 +573,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">SH</span>
-      <img src="https://avatars.githubusercontent.com/S-Hamsalekha-annamai?v=4&size=200" alt="S. Hamsalekha" loading="lazy" onerror="this.remove();">
+      <img src="https://unavatar.io/linkedin/hamsalekha-s-a88ab59a?fallback=false" alt="S. Hamsalekha" loading="lazy" onerror="this.remove();">
     </div>
     <div class="tnl-core-name">S. Hamsalekha</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
@@ -581,7 +581,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">MA</span>
-      <img src="https://avatars.githubusercontent.com/muditagrawal2007?v=4&size=200" alt="Mudit Agrawal" loading="lazy" onerror="this.remove();">
+      <img src="https://unavatar.io/linkedin/mudit-agrawal-16929337a?fallback=false" alt="Mudit Agrawal" loading="lazy" onerror="this.remove();">
     </div>
     <div class="tnl-core-name">Mudit Agrawal</div>
     <div class="tnl-core-role">Maintainer</div>
@@ -589,7 +589,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">KG</span>
-      <img src="https://avatars.githubusercontent.com/KrishnaG-101?v=4&size=200" alt="Krishna Gelra" loading="lazy" onerror="this.remove();">
+      <img src="https://unavatar.io/linkedin/krishna-gelra?fallback=false" alt="Krishna Gelra" loading="lazy" onerror="this.remove();">
     </div>
     <div class="tnl-core-name">Krishna Gelra</div>
     <div class="tnl-core-role">Maintainer</div>
