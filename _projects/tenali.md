@@ -81,12 +81,12 @@ A learner moves through four stages every session:
   if (!track) return;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Clone for seamless LTR loop
+  // Clone for seamless RTL loop
   var originals = Array.prototype.slice.call(track.children);
   originals.forEach(function(card) { track.appendChild(card.cloneNode(true)); });
 
   var halfWidth = track.scrollWidth / 2;
-  var position = -halfWidth;          // start showing clones (so originals slide in from the LEFT)
+  var position = 0;                    // start at left edge
   var velocity = reduceMotion ? 0 : 0.4;
   var paused = false;
 
@@ -94,8 +94,8 @@ A learner moves through four stages every session:
 
   function frame() {
     if (!paused && velocity !== 0) {
-      position += velocity;            // move RIGHT (LTR)
-      if (position >= 0) position -= halfWidth; // wrap: clone section on the LEFT exits, original slides in
+      position -= velocity;            // move LEFT (RTL)
+      if (-position >= halfWidth) position += halfWidth; // wrap
       apply();
     }
     requestAnimationFrame(frame);
