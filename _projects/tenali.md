@@ -50,28 +50,66 @@ Tenali covers foundational numeracy through to algebra in a game-like structure 
 
 A learner moves through four stages every session:
 
-<div class="audience-grid">
-  <div class="audience-card">
-    <i class="ph ph-globe audience-card-icon"></i>
-    <div class="audience-card-title">1 · Open</div>
-    <p class="audience-card-desc">Land on the home grid at tenali.fun — 90+ colorful topic cards. Guest mode works fully; JWT login is optional.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-target audience-card-icon"></i>
-    <div class="audience-card-title">2 · Pick</div>
-    <p class="audience-card-desc">Choose a mode: Goal Practice, Battle Arena, Detective Agency, Guided Journey, Random Mix, Custom Lesson, or a topic card.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-play audience-card-icon"></i>
-    <div class="audience-card-title">3 · Play</div>
-    <p class="audience-card-desc">20 adaptive questions. Correct bumps adaptScore; wrong drops it. Tap "Solve" at any time for a step-by-step walkthrough.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-trophy audience-card-icon"></i>
-    <div class="audience-card-title">4 · Earn</div>
-    <p class="audience-card-desc">Coins, XP, streak, badges. Progress saved in MongoDB — pick up tomorrow from where you stopped.</p>
+<div class="tnl-marquee tnl-marquee--4" id="tnl-workflow-marquee">
+  <div class="tnl-marquee-track" id="tnl-workflow-track">
+    <div class="audience-card">
+      <i class="ph ph-globe audience-card-icon"></i>
+      <div class="audience-card-title">1 · Open</div>
+      <p class="audience-card-desc">Land on the home grid at tenali.fun — 90+ colorful topic cards. Guest mode works fully; JWT login is optional.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-target audience-card-icon"></i>
+      <div class="audience-card-title">2 · Pick</div>
+      <p class="audience-card-desc">Choose a mode: Goal Practice, Battle Arena, Detective Agency, Guided Journey, Random Mix, Custom Lesson, or a topic card.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-play audience-card-icon"></i>
+      <div class="audience-card-title">3 · Play</div>
+      <p class="audience-card-desc">20 adaptive questions. Correct bumps adaptScore; wrong drops it. Tap "Solve" at any time for a step-by-step walkthrough.</p>
+    </div>
+    <div class="audience-card">
+      <i class="ph ph-trophy audience-card-icon"></i>
+      <div class="audience-card-title">4 · Earn</div>
+      <p class="audience-card-desc">Coins, XP, streak, badges. Progress saved in MongoDB — pick up tomorrow from where you stopped.</p>
+    </div>
   </div>
 </div>
+
+<script>
+(function() {
+  var track = document.getElementById('tnl-workflow-track');
+  if (!track) return;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Clone for seamless LTR loop
+  var originals = Array.prototype.slice.call(track.children);
+  originals.forEach(function(card) { track.appendChild(card.cloneNode(true)); });
+
+  var halfWidth = track.scrollWidth / 2;
+  var position = -halfWidth;          // start showing clones (so originals slide in from the LEFT)
+  var velocity = reduceMotion ? 0 : 0.4;
+  var paused = false;
+
+  function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
+
+  function frame() {
+    if (!paused && velocity !== 0) {
+      position += velocity;            // move RIGHT (LTR)
+      if (position >= 0) position -= halfWidth; // wrap: clone section on the LEFT exits, original slides in
+      apply();
+    }
+    requestAnimationFrame(frame);
+  }
+  apply();
+  requestAnimationFrame(frame);
+
+  var marquee = track.parentElement;
+  if (marquee) {
+    marquee.addEventListener('mouseenter', function() { paused = true; });
+    marquee.addEventListener('mouseleave', function() { paused = false; });
+  }
+})();
+</script>
 
 <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px; margin-top:1.5rem;">
 

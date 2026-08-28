@@ -2837,6 +2837,18 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   }
 }
 
+// 4-up variant (workflow): all 4 stages visible at once on desktop
+.tnl-marquee--4 .tnl-marquee-track > .audience-card {
+  flex: 0 0 calc((100vw - 7.2rem) / 4);
+  min-width: 220px;
+  max-width: 320px;
+
+  @include media-query($on-palm) {
+    flex: 0 0 75vw;
+    min-width: 0;
+  }
+}
+
 .tnl-marquee-arrow {
   position: absolute;
   top: 50%;
