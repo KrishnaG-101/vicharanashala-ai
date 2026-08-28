@@ -475,6 +475,34 @@ table {
   }
 }
 
+// Contributors marquee (RTL, smaller chips, all remaining contributors)
+.tnl-marquee.tnl-contrib-marquee {
+  margin: 1.4rem 0 0.4rem;
+}
+
+.tnl-marquee-track .tnl-contrib-chip,
+.contributor-chip.tnl-contrib-chip {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.95rem;
+  background: $background-color;
+  color: $grey-color-dark;
+  border-color: $grey-color-light;
+  transition: background 0.2s ease, color 0.2s ease,
+              border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: $brand-color;
+    color: #fff;
+    border-color: $brand-color;
+    transform: translateY(-2px);
+  }
+
+  // Hide the orange dot prefix that the main contributor-chip uses
+  &::before { display: none; }
+}
+
 // ── Core team cards (S.R.S. Iyengar, Jinal Gupta, Hamsalekha, Mudit Agrawal) ──
 .tnl-core-team {
   display: grid;
