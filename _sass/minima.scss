@@ -138,80 +138,70 @@ $on-laptop:     860px !default;
   &, &:visited { color: $text-color; }
 }
 
-.site-nav {
-  float: none;
-  line-height: 1;
-  margin-left: auto;
+@media (min-width: 601px) {
+  .site-nav {
+    float: none;
+    line-height: 1;
+    margin-left: auto;
 
-  .trigger {
-    clear: none;
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .dropdown {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .page-link,
-  .dropbtn {
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: $grey-color;
-
-    &:hover { color: $text-color; text-decoration: none; }
-  }
-
-  .dropbtn {
-    padding: 5px 8px;
-    margin-left: -8px;
-    border-radius: 4px;
-  }
-
-  .dropdown-content {
-    top: 100%;
-    left: auto;
-    right: 0;
-    z-index: 1000;
-    background-color: $background-color;
-  }
-
-  .dropdown-content a {
-    font-size: 0.82rem;
-    letter-spacing: 0.02em;
-    text-transform: none;
-    color: $text-color;
-
-    &:hover { background: $grey-color-light; }
-  }
-
-  .dropdown:hover .dropbtn {
-    color: $text-color;
-    background-color: rgba(0,0,0,0.05);
-  }
-
-  .nav-active {
-    color: $text-color !important;
-    font-weight: 600;
-    border-bottom: 2px solid $text-color;
-    padding-bottom: 1px;
-  }
-
-  @include media-query($on-palm) {
-    input ~ .trigger { display: none; }
-    input:checked ~ .trigger {
+    .trigger {
+      clear: none;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0;
-      padding-bottom: 5px;
+      align-items: center;
+      gap: 1.2rem;
     }
-    .dropdown { flex-direction: column; align-items: flex-end; }
+
+    .dropdown {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .page-link,
+    .dropbtn {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $grey-color;
+
+      &:hover { color: $text-color; text-decoration: none; }
+    }
+
+    .dropbtn {
+      padding: 5px 8px;
+      margin-left: -8px;
+      border-radius: 4px;
+    }
+
+    .dropdown-content {
+      top: 100%;
+      left: auto;
+      right: 0;
+      z-index: 1000;
+      background-color: $background-color;
+    }
+
+    .dropdown-content a {
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: $text-color;
+
+      &:hover { background: $grey-color-light; }
+    }
+
+    .dropdown:hover .dropbtn {
+      color: $text-color;
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    .nav-active {
+      color: $text-color !important;
+      font-weight: 600;
+      border-bottom: 2px solid $text-color;
+      padding-bottom: 1px;
+    }
   }
 }
 
@@ -312,7 +302,13 @@ table {
 
 // ── Page content spacing ──
 .page-content {
-  padding: $spacing-unit * 1.5 0;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .page-content {
+    padding: 0 0;
+  }
 }
 
 .post-content, .page-content .wrapper {
@@ -1607,7 +1603,7 @@ table {
 .process-item:nth-child(4) { transition-delay: 0.24s; }
 
 // Reach map
-.story-reach { padding: 3rem 0; border-bottom: 1px solid #e2e2de; margin-bottom: 3.5rem; }
+.story-reach { padding: 0.5rem 0 2rem; border-bottom: 1px solid #e2e2de; margin-bottom: 2rem; }
 
 .story-reach-desc { font-size: 0.95rem; color: #767676; margin-bottom: 1.2rem; }
 
@@ -1662,8 +1658,8 @@ table {
 
 // Initiative individual page header
 .initiative-page-hero {
-  padding: 2.5rem 0 2rem;
-  margin-bottom: 2rem;
+  padding: 0.5rem 0 1rem;
+  margin-bottom: 0.5rem;
 }
 .initiative-back {
   display: inline-flex;
