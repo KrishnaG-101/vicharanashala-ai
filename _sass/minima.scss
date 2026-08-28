@@ -545,15 +545,16 @@ table {
   margin: 2rem 0 1rem;
   padding: 1.8rem 1.6rem;
   border-radius: 12px;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-  color: #f9f9f7;
+  background: linear-gradient(180deg, #fafaf8 0%, #fff 100%);
+  border: 1px solid $grey-color-light;
+  color: $text-color;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   position: relative;
   overflow: hidden;
 
-  // Animated conic accent in the corner
+  // Soft animated conic accent in the corner
   &::before {
     content: "";
     position: absolute;
@@ -564,8 +565,8 @@ table {
     background: conic-gradient(
       from 0deg,
       transparent 0deg,
-      rgba(224,112,32,0.18) 60deg,
-      rgba(58,183,191,0.12) 120deg,
+      rgba(224,112,32,0.08) 60deg,
+      rgba(58,183,191,0.05) 120deg,
       transparent 180deg
     );
     filter: blur(40px);
@@ -609,7 +610,8 @@ table {
     border-radius: 8px;
     text-decoration: none;
     transition: transform 0.2s ease, background 0.2s ease,
-                box-shadow 0.2s ease;
+                border-color 0.2s ease, box-shadow 0.2s ease,
+                color 0.2s ease;
     border: 1px solid transparent;
 
     i { font-size: 1.05rem; }
@@ -625,10 +627,10 @@ table {
   }
 
   .tnl-closing-btn--ghost {
-    background: transparent;
-    color: #f9f9f7;
-    border-color: rgba(255,255,255,0.25);
-    &:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.45); }
+    background: #fff;
+    color: $text-color;
+    border-color: $grey-color-light;
+    &:hover { background: $grey-color-light; border-color: $grey-color; }
   }
 }
 
