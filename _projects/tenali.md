@@ -421,28 +421,6 @@ function showTnlMode(id, btn) {
 
 ---
 
-## **Who It's For**
-
-<div class="audience-grid">
-  <div class="audience-card">
-    <i class="ph ph-student audience-card-icon"></i>
-    <div class="audience-card-title">Learners</div>
-    <p class="audience-card-desc">The next question lands where the last one left you; the explanation is one tap away.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-house-line audience-card-icon"></i>
-    <div class="audience-card-title">Parents</div>
-    <p class="audience-card-desc">See what your child practised, where bands sit, which topics still glow red.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-buildings audience-card-icon"></i>
-    <div class="audience-card-title">Schools &amp; Programmes</div>
-    <p class="audience-card-desc">Run a cohort — internship, summer school, numeracy intervention. Engagement signals without the surveillance.</p>
-  </div>
-</div>
-
----
-
 ## **By the Numbers**
 
 <div class="stat-row will-animate" id="tenali-stat-row">
