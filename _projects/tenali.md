@@ -17,9 +17,6 @@ quote_author: "Said of Tenali Raman"
     .page-content .wrapper .tnl-demo { padding: 1rem; }
     .page-content .wrapper .tnl-adapter { height: 38px; }
     .page-content .wrapper .tnl-modes { grid-template-columns: 1fr; }
-    .page-content .wrapper .tnl-linear-feature-row { grid-template-columns: 1fr; }
-    .page-content .wrapper .tnl-proctor-grid { grid-template-columns: 1fr; }
-    .page-content .wrapper .tnl-proctor-feature-row { grid-template-columns: 1fr; }
     .page-content .wrapper .shot-carousel { margin: 1rem 0 1.2rem; }
     .page-content .wrapper .stat-row { gap: 1.5rem; padding: 1.2rem 0; }
     .page-content .wrapper .stat .stat-number { font-size: 1.6rem; }
@@ -39,7 +36,7 @@ quote_author: "Said of Tenali Raman"
   <a href="https://tenali.fun" target="_blank" rel="noopener" class="product-try-link">Try it now ↗</a>
 </div>
 
-<p class="product-page-tagline">Adaptive math quiz platform with 69 algorithmically generated puzzle types, real-time multiplayer, and step-by-step explanations. Where numbers lose their menace.</p>
+<p class="product-page-tagline">Adaptive math practice with 69 algorithmically generated puzzle types, live multiplayer, and step-by-step explanations — for learners, parents, and cohorts.</p>
 
 ---
 
@@ -173,7 +170,7 @@ Tenali's defining feature is the difficulty engine that sits underneath every qu
 ## **About**
 
 <div class="split-media">
-<p>Tenali covers the full journey from foundational numeracy through to algebra, using a game-like structure that keeps learners invested. Every question is generated on the fly — there is no question database — so practice is infinite and never repeats. The platform is live and free to use at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>, with one Node process serving the React app, the puzzle APIs, the JWT auth, the Socket.IO Battle Arena, and the multi-language code playground.</p>
+<p>Tenali covers the full journey from foundational numeracy through to algebra, using a game-like structure that keeps learners invested. Every question is generated on the fly — no question database — so practice is infinite and never repeats. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.</p>
 
 <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px;">
 </div>
@@ -255,71 +252,6 @@ A math learning surface where the difficulty adjusts to the learner, not the oth
 
 ---
 
-## **Linear Algebra Lab**
-
-A curated 56-mission journey through linear algebra — from ratios on a plane to matrix factorisation and PageRank — built on Tenali's adaptive engine. Six modules, four difficulty bands each, every question anchored to a real-life story.
-
-<div class="tnl-linear">
-  <div class="tnl-linear-band">
-    <span class="tnl-linear-label"><i class="ph ph-function"></i> LINEAR ALGEBRA LAB</span>
-    <h2 class="tnl-linear-h">56 missions. 6 modules. One coherent journey.</h2>
-    <p class="tnl-linear-p">From <em>Ram and Lakshman's piggy-bank points</em> to <em>how Google ranks pages</em>. Each question is a story; the math is what you take away.</p>
-  </div>
-
-  <div class="audience-grid">
-    <div class="audience-card">
-      <i class="ph ph-ruler audience-card-icon"></i>
-      <div class="audience-card-title">M1 · Ratios &amp; Lines</div>
-      <p class="audience-card-desc">14 missions. Reading ratios from a real-life story, plotting ordered pairs, recognising that a ratio between two numbers produces points on a straight line through the origin.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-compass audience-card-icon"></i>
-      <div class="audience-card-title">M2 · Coordinate Geometry</div>
-      <p class="audience-card-desc">10 missions. Coordinate moves, sequences of turns, finding the equation of a line that passes through a set of points.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-arrows-out-cardinal audience-card-icon"></i>
-      <div class="audience-card-title">M3 · Linear Transforms</div>
-      <p class="audience-card-desc">15 missions. Translation, rotation, reflection, scaling — composing transformations and finding fixed points.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-grid-four audience-card-icon"></i>
-      <div class="audience-card-title">M4 · Matrices</div>
-      <p class="audience-card-desc">9 missions. Matrix multiplication, representation of linear maps, change of basis, rank and null space.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-math-operations audience-card-icon"></i>
-      <div class="audience-card-title">M5 · Determinants &amp; Inverses</div>
-      <p class="audience-card-desc">5 missions. Determinants as area, invertibility, solving linear systems via matrix inversion.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-chart-network audience-card-icon"></i>
-      <div class="audience-card-title">M6 · Recommenders &amp; PageRank</div>
-      <p class="audience-card-desc">6 missions. Matrix factorisation, dimensionality reduction, the PageRank algorithm and its use in real-world recommendation engines.</p>
-    </div>
-  </div>
-
-  <div class="tnl-linear-feature-row">
-    <div class="audience-card">
-      <i class="ph ph-book-open audience-card-icon"></i>
-      <div class="audience-card-title">Real-life stories</div>
-      <p class="audience-card-desc">Every question is anchored to a story — piggy banks, cricket squads, bakeries, factories. Math emerges from context.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-list-numbers audience-card-icon"></i>
-      <div class="audience-card-title">Curated MCQs</div>
-      <p class="audience-card-desc">56 missions across four difficulty bands — easy, medium, hard, real-life application. Each one hand-authored.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-chart-line-up audience-card-icon"></i>
-      <div class="audience-card-title">Adaptive difficulty</div>
-      <p class="audience-card-desc">Same engine as the rest of Tenali — your adaptScore drifts up and down with every correct / wrong answer.</p>
-    </div>
-  </div>
-</div>
-
----
-
 ## **Key Features**
 
 <div class="audience-grid">
@@ -357,6 +289,11 @@ A curated 56-mission journey through linear algebra — from ratios on a plane t
     <i class="ph ph-puzzle-piece audience-card-icon"></i>
     <div class="audience-card-title">Spaced Repetition</div>
     <p class="audience-card-desc">Recently-missed questions are promoted back into rotation by lib/spacingLadder.js, driven by Bayesian Knowledge Tracing (lib/bkt.js).</p>
+  </div>
+  <div class="audience-card">
+    <i class="ph ph-shield-check audience-card-icon"></i>
+    <div class="audience-card-title">Proctoring</div>
+    <p class="audience-card-desc">Optional exam-mode supervision via face-api.js — focus score, tab switches, look-aways — surfaced to a staff-only dashboard. Watchful without being intrusive.</p>
   </div>
 </div>
 
@@ -525,9 +462,7 @@ Every puzzle type shares the same two-route contract — `GET /<type>-api/questi
 
 ## **Architecture**
 
-React 19 single-page application, served by a single Express 5 process with Mongoose 9 against MongoDB and Socket.IO 4 for live multiplayer. JWT auth with bcrypt 10 rounds, express-rate-limit, CORS allowlist, env-sourced seed users. Frontend uses Vite 8, framer-motion, Three.js, mafs, and face-api.js for the proctoring layer. The scoring pipeline mirrors operational data and recomputes from scratch on every run.
-
-The whole thing runs on a single VPS — tenali.fun — with one Node process serving the React app, the puzzle APIs, the JWT auth, the Socket.IO Battle Arena, and the multi-language code playground. No question database: every question is generated on the fly, so practice is infinite and never repeats.
+React 19 single-page app served by a single Express 5 process (Mongoose 9 + MongoDB, Socket.IO 4 for live multiplayer). JWT auth, bcrypt 10 rounds, express-rate-limit, CORS allowlist. Frontend on Vite 8 with framer-motion, Three.js, mafs, and face-api.js. One VPS, one Node process, no question database — every question is generated on the fly.
 
 ---
 
@@ -567,122 +502,6 @@ function showTnlRoom(id, btn) {
   document.getElementById('tnl-room-' + id).classList.add('active');
   btn.classList.add('active');
 }
-</script>
-
----
-
-## **Proctoring System**
-
-Optional exam-mode supervision. Webcam + face-api.js emotion detection, focus / tab-switch event logging, and an admin-only dashboard for staff. The goal is to keep assessment honest without making learners feel surveilled.
-
-<div class="tnl-proctor">
-  <div class="tnl-proctor-band">
-    <span class="tnl-proctor-label"><i class="ph ph-shield-check"></i> PROCTORING SYSTEM</span>
-    <h2 class="tnl-proctor-h">Watchful without being intrusive.</h2>
-    <p class="tnl-proctor-p">Focus is a signal, not a verdict. The proctoring layer measures engagement — where attention drifts, when tabs switch, whether the face is still at the screen — and surfaces it to the staff dashboard. Learners see their own score; teachers see the cohort.</p>
-  </div>
-
-  <div class="tnl-proctor-grid">
-    <div class="tnl-proctor-viewport">
-      <div class="tnl-proctor-mesh"></div>
-      <div class="tnl-proctor-face-box"></div>
-      <div class="tnl-proctor-badge"><i class="ph ph-check-circle"></i> Face Detected</div>
-      <div class="tnl-proctor-gaze"><span class="tnl-proctor-eye"></span> Looking at tab</div>
-      <div class="tnl-proctor-emotion"><span class="tnl-proctor-emo-icon">😐</span> Neutral · 92% conf</div>
-      <div class="tnl-proctor-transcript">
-        <span class="tnl-proctor-tx-text">Solve 3x² − 12 = 27 by isolating x² first</span><span class="tnl-proctor-cursor"></span>
-      </div>
-    </div>
-    <div class="tnl-proctor-stats">
-      <div class="tnl-proctor-stat-row">
-        <span class="tnl-proctor-stat-label">Focus Score</span>
-        <span class="tnl-proctor-stat-value tnl-good" id="tnl-focus-val">92%</span>
-        <div class="tnl-proctor-stat-meter"><div class="tnl-proctor-stat-fill" id="tnl-focus-fill"></div></div>
-      </div>
-      <div class="tnl-proctor-stat-row">
-        <span class="tnl-proctor-stat-label">Emotion (face-api.js)</span>
-        <span class="tnl-proctor-stat-emotion"><span>😐</span> Neutral</span>
-      </div>
-      <div class="tnl-proctor-stat-row">
-        <span class="tnl-proctor-stat-label">Tab switches</span>
-        <span class="tnl-proctor-stat-value tnl-amber" id="tnl-tabs-val">0</span>
-        <div class="tnl-proctor-stat-meter"><div class="tnl-proctor-stat-fill tnl-fill-amber" id="tnl-tabs-fill"></div></div>
-      </div>
-      <div class="tnl-proctor-stat-row">
-        <span class="tnl-proctor-stat-label">Look-aways</span>
-        <span class="tnl-proctor-stat-value" id="tnl-look-val">0</span>
-        <div class="tnl-proctor-stat-meter"><div class="tnl-proctor-stat-fill" id="tnl-look-fill"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tnl-proctor-feature-row">
-    <div class="audience-card">
-      <i class="ph ph-camera audience-card-icon"></i>
-      <div class="audience-card-title">Webcam + face-api.js</div>
-      <p class="audience-card-desc">Real-time emotion detection. Neutral, focused, confused — the engine reads the room without storing frames.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-eye audience-card-icon"></i>
-      <div class="audience-card-title">Focus tracking</div>
-      <p class="audience-card-desc">Tab switches, look-aways, face-missing events — every signal logged, every signal reviewable by the learner and by staff.</p>
-    </div>
-    <div class="audience-card">
-      <i class="ph ph-lock-key audience-card-icon"></i>
-      <div class="audience-card-title">Admin-only dashboard</div>
-      <p class="audience-card-desc">/api/proctor/sessions — staff-only routes, secured with requireAdmin. Live stats, flagged sessions, per-student history.</p>
-    </div>
-  </div>
-</div>
-
-<script>
-(function() {
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var focusVal = document.getElementById('tnl-focus-val');
-  var focusFill = document.getElementById('tnl-focus-fill');
-  var tabsVal = document.getElementById('tnl-tabs-val');
-  var tabsFill = document.getElementById('tnl-tabs-fill');
-  var lookVal = document.getElementById('tnl-look-val');
-  var lookFill = document.getElementById('tnl-look-fill');
-  if (!focusVal) return;
-
-  function setPct(valEl, fillEl, pct) {
-    valEl.textContent = pct + '%';
-    if (fillEl) fillEl.style.setProperty('--final', pct + '%');
-  }
-
-  function setCount(valEl, fillEl, n, max) {
-    valEl.textContent = n;
-    if (fillEl) fillEl.style.setProperty('--final', Math.min((n / max) * 100, 100) + '%');
-  }
-
-  setPct(focusVal, focusFill, 92);
-  setCount(tabsVal, tabsFill, 1, 5);
-  setCount(lookVal, lookFill, 0, 5);
-
-  if (reduceMotion) return;
-
-  // tab-switch counter: cycles 0 → 1 → 2 → 3 → 0 ...
-  var t = 0;
-  setInterval(function() {
-    t = (t + 1) % 5;
-    var n = t;
-    setCount(tabsVal, tabsFill, n, 5);
-  }, 3800);
-
-  // look-aways counter: cycles 0 → 1 → 0 → 1 ...
-  var l = 0;
-  setInterval(function() {
-    l = (l + 1) % 3;
-    setCount(lookVal, lookFill, l, 5);
-  }, 6200);
-
-  // focus score breathing
-  setInterval(function() {
-    var base = 88 + Math.round(Math.random() * 8);
-    setPct(focusVal, focusFill, base);
-  }, 5200);
-})();
 </script>
 
 ---
@@ -739,62 +558,14 @@ Tenali is built and kept running by a community of student and staff contributor
 
 ---
 
-## **Where It's Going**
-
-The current build runs as one Node process on a single VPS. Here is what the lab is actively building toward.
-
-<div class="roadmap">
-  <div class="roadmap-item">
-    <div class="roadmap-status"><span class="rm-badge rm-live">Live</span></div>
-    <div class="roadmap-body">
-      <div class="roadmap-title">Adaptive engine + 69 puzzle families</div>
-      <div class="roadmap-desc">Difficult adjusts to the learner in real time, across every topic — arithmetic, geometry, algebra, calculus, vocab, GK.</div>
-    </div>
-  </div>
-  <div class="roadmap-item">
-    <div class="roadmap-status"><span class="rm-badge rm-progress">In Progress</span></div>
-    <div class="roadmap-body">
-      <div class="roadmap-title">Offline classroom experiments</div>
-      <div class="roadmap-desc">Settings without reliable internet need Tenali to work differently at the listening and question-generation layer. Initial deployments planned.</div>
-    </div>
-  </div>
-  <div class="roadmap-item">
-    <div class="roadmap-status"><span class="rm-badge rm-upcoming">Upcoming</span></div>
-    <div class="roadmap-body">
-      <div class="roadmap-title">Mobile-native client</div>
-      <div class="roadmap-desc">A dedicated mobile shell that respects the adaptive engine while reducing bandwidth and battery load on low-end devices.</div>
-    </div>
-  </div>
-  <div class="roadmap-item">
-    <div class="roadmap-status"><span class="rm-badge rm-upcoming">Research</span></div>
-    <div class="roadmap-body">
-      <div class="roadmap-title">What effort signals actually predict</div>
-      <div class="roadmap-desc">Every Tenali cohort generates data on which engagement patterns correlate with learning outcomes. The research question — what does consistent SP accumulation actually predict, and which actions matter most?</div>
-    </div>
-  </div>
-</div>
-
----
-
-## **Summership**
-
-A flagship initiative running on Tenali — a structured summer learning cohort that uses the adaptive engine to keep every learner in their zone, with the proctoring layer providing engagement signals to programme coordinators.
-
-<div class="section-band">
-  <h2>Summership — the cohort mode Tenali was built for.</h2>
-  <p>Engagement tracked per session, per learner, per cohort. The same engine that keeps one student in their zone keeps a hundred.</p>
-</div>
-
----
-
 ## **Contributors**
 
 Tenali is built and maintained by a community of student and staff contributors.
 
 <div class="contributor-list">
   <span class="contributor-chip">S. R. S. Iyengar</span>
-  <span class="contributor-chip">Mudit Agrawal</span>
   <span class="contributor-chip">Jinal Gupta</span>
+  <span class="contributor-chip">Mudit Agrawal</span>
   <span class="contributor-chip">Lakshmi Varshini Nandula</span>
   <span class="contributor-chip">Sameer Mishra</span>
   <span class="contributor-chip">Vaibhav Satish</span>
