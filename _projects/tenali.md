@@ -115,21 +115,64 @@ A learner moves through four stages every session:
 
 <script>
 (function() {
-  // Reveal .tnl-screenshot elements on first scroll into view
   var shots = document.querySelectorAll('.tnl-screenshot');
-  if (!shots.length || !('IntersectionObserver' in window)) {
+  if (!shots.length) return;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reveal on scroll into view
+  if (!('IntersectionObserver' in window)) {
     shots.forEach(function(s) { s.classList.add('is-in'); });
-    return;
+  } else {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    shots.forEach(function(s) { io.observe(s); });
   }
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-in');
-        io.unobserve(e.target);
+
+  // Mouse-tracking 3D tilt + cursor spotlight
+  if (reduceMotion) return;
+  shots.forEach(function(shot) {
+    var raf = null;
+    var targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+
+    function onMove(e) {
+      var rect = shot.getBoundingClientRect();
+      var px = (e.clientX - rect.left) / rect.width;   // 0..1
+      var py = (e.clientY - rect.top) / rect.height;   // 0..1
+      shot.style.setProperty('--mx', (px * 100) + '%');
+      shot.style.setProperty('--my', (py * 100) + '%');
+      targetY = (px - 0.5) * 14;   // rotateY
+      targetX = -(py - 0.5) * 10;  // rotateX
+      if (!raf) raf = requestAnimationFrame(update);
+    }
+
+    function onLeave() {
+      targetX = 0; targetY = 0;
+      if (!raf) raf = requestAnimationFrame(update);
+    }
+
+    function update() {
+      currentX += (targetX - currentX) * 0.15;
+      currentY += (targetY - currentY) * 0.15;
+      shot.style.setProperty('--tiltX', currentX.toFixed(2) + 'deg');
+      shot.style.setProperty('--tiltY', currentY.toFixed(2) + 'deg');
+      if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+        raf = requestAnimationFrame(update);
+      } else {
+        shot.style.setProperty('--tiltX', '0deg');
+        shot.style.setProperty('--tiltY', '0deg');
+        raf = null;
       }
-    });
-  }, { threshold: 0.2 });
-  shots.forEach(function(s) { io.observe(s); });
+    }
+
+    shot.addEventListener('mousemove', onMove);
+    shot.addEventListener('mouseleave', onLeave);
+  });
 })();
 </script>
 

@@ -2888,22 +2888,29 @@ $fln-accent:    #e07020;   // brand orange (single accent)
 .tnl-marquee-arrow--left  { left: 0.6rem; }
 .tnl-marquee-arrow--right { right: 0.6rem; }
 
-// ── Tenali product screenshots — entrance + hover lift + shine sweep ──
+// ── Tenali product screenshots — modern 3D tilt + spotlight + shine ──
 .tnl-screenshot {
   display: block;
   width: 100%;
   border: 1px solid $grey-color-light;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-top: 1.5rem;
   position: relative;
   overflow: hidden;
-  // Start invisible + nudged down; animation reveals on .is-in
   opacity: 0;
   transform: translateY(18px);
-  transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
-              box-shadow 0.35s ease;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
   box-shadow: 0 1px 2px rgba(0,0,0,0.04);
   will-change: transform;
+  // CSS vars updated by JS on mousemove (--mx, --my as % of element)
+  --mx: 50%;
+  --my: 50%;
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+  transform-style: preserve-3d;
+  perspective: 800px;
 
   &.is-in {
     opacity: 1;
@@ -2911,49 +2918,59 @@ $fln-accent:    #e07020;   // brand orange (single accent)
     animation: tnl-shot-rise 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) both;
   }
 
+  // 3D tilt on hover — driven by JS custom properties
   &:hover {
-    transform: translateY(-8px) scale(1.015);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-10px)
+               rotateX(var(--tiltX))
+               rotateY(var(--tiltY))
+               scale(1.02);
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.20),
+      0 8px 20px rgba(0,0,0,0.10);
     border-color: $brand-color;
   }
 
-  // Shine sweep on hover — a wide diagonal gloss that crosses the image
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(115deg,
-      transparent 25%,
-      rgba(255,255,255,0.15) 35%,
-      rgba(255,255,255,0.55) 48%,
-      rgba(255,255,255,0.85) 50%,
-      rgba(255,255,255,0.55) 52%,
-      rgba(255,255,255,0.15) 65%,
-      transparent 75%);
-    transform: translateX(-150%) skewX(-20deg);
-    transition: transform 1.1s cubic-bezier(0.25, 0.8, 0.25, 1);
-    pointer-events: none;
-  }
-
-  &:hover::after { transform: translateX(150%) skewX(-20deg); }
-
-  // Brand-color glow ring on hover
+  // Cursor-following spotlight (radial gradient at --mx, --my)
   &::before {
     content: "";
     position: absolute;
-    inset: -2px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, $brand-color, #f5b6c0, #3ab7bf);
+    inset: 0;
+    background: radial-gradient(
+      circle 220px at var(--mx) var(--my),
+      rgba(255,255,255,0.55),
+      rgba(255,255,255,0.15) 35%,
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+  }
+
+  &:hover::before { opacity: 1; }
+
+  // Brand-color glow ring behind the image
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 10px;
+    background: conic-gradient(
+      from var(--mx, 0deg),
+      $brand-color,
+      #3ab7bf,
+      #f5b6c0,
+      $brand-color
+    );
     opacity: 0;
     z-index: -1;
     transition: opacity 0.4s ease;
-    filter: blur(8px);
+    filter: blur(10px);
+    animation: tnl-shot-spin 6s linear infinite;
   }
 
-  &:hover::before { opacity: 0.45; }
+  &:hover::after { opacity: 0.5; }
 }
 
 @keyframes tnl-shot-rise {
@@ -2961,9 +2978,15 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes tnl-shot-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 // ── Reduced-motion respect ──
 @media (prefers-reduced-motion: reduce) {
   // (no per-class rules currently — left empty for future marquee/scroll tweaks)
   .tnl-screenshot { opacity: 1; transform: none; }
+  .tnl-screenshot::before,
   .tnl-screenshot::after { display: none; }
 }
