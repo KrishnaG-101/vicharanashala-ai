@@ -174,11 +174,6 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
       <p class="audience-card-desc">Chain of math clues; solving one unlocks the next. Hundreds of procedurally generated cases.</p>
     </div>
     <div class="audience-card">
-      <i class="ph ph-lightbulb audience-card-icon"></i>
-      <div class="audience-card-title">Solve-for-Explanation</div>
-      <p class="audience-card-desc">Send <code>{ solve: true }</code> on any POST *-api/check. Step-by-step walkthrough — 50+ puzzle types.</p>
-    </div>
-    <div class="audience-card">
       <i class="ph ph-graduation-cap audience-card-icon"></i>
       <div class="audience-card-title">Guided Journey</div>
       <p class="audience-card-desc">Linear curriculum with concept checkpoints. Server enforces progression: locked → blue → bronze → silver → gold.</p>
