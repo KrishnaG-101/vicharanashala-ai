@@ -565,7 +565,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">JG</span>
-      <img data-fallbacks="https://avatars.githubusercontent.com/jgupta05072003-code?v=4&size=200|https://ui-avatars.com/api/?name=Jinal+Gupta&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/jinal-gupta-220a652b6?fallback=false" alt="Jinal Gupta" loading="lazy">
+      <img data-fallbacks="https://unavatar.io/linkedin/jinal-gupta-220a652b6|https://avatars.githubusercontent.com/jgupta05072003-code?v=4&size=200|https://ui-avatars.com/api/?name=Jinal+Gupta&size=200&background=e07020&color=fff&bold=true" src="https://www.linkedin.com/in/jinal-gupta-220a652b6/" alt="Jinal Gupta" loading="lazy">
     </div>
     <div class="tnl-core-name">Jinal Gupta</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
@@ -589,7 +589,7 @@ Eight ways to play. Same engine, different shape on top.
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
       <span class="tnl-core-initials">KG</span>
-      <img data-fallbacks="https://avatars.githubusercontent.com/KrishnaG-101?v=4&size=200|https://ui-avatars.com/api/?name=Krishna+Gelra&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/krishna-gelra?fallback=false" alt="Krishna Gelra" loading="lazy">
+      <img data-fallbacks="https://unavatar.io/linkedin/krishna-gelra|https://avatars.githubusercontent.com/KrishnaG-101?v=4&size=200|https://ui-avatars.com/api/?name=Krishna+Gelra&size=200&background=e07020&color=fff&bold=true" src="https://www.linkedin.com/in/krishna-gelra/" alt="Krishna Gelra" loading="lazy">
     </div>
     <div class="tnl-core-name">Krishna Gelra</div>
     <div class="tnl-core-role">Maintainer</div>
