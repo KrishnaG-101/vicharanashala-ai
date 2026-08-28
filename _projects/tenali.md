@@ -249,6 +249,8 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
 ## **Key Features**
 
 <div class="tnl-marquee">
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--left" id="tnl-features-left" aria-label="Scroll features left"><i class="ph ph-caret-left"></i></button>
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--right" id="tnl-features-right" aria-label="Scroll features right"><i class="ph ph-caret-right"></i></button>
   <div class="tnl-marquee-track" id="tnl-features-track">
     <div class="audience-card">
       <i class="ph ph-chart-line-up audience-card-icon"></i>
@@ -321,14 +323,59 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
 <script>
 (function() {
   var track = document.getElementById('tnl-features-track');
+  var leftBtn = document.getElementById('tnl-features-left');
+  var rightBtn = document.getElementById('tnl-features-right');
   if (!track) return;
+
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) return;
-  // Clone all children once for seamless RTL loop
+
+  // Clone once for seamless looping
   var originals = Array.prototype.slice.call(track.children);
-  originals.forEach(function(card) {
-    track.appendChild(card.cloneNode(true));
-  });
+  originals.forEach(function(card) { track.appendChild(card.cloneNode(true)); });
+
+  var halfWidth = track.scrollWidth / 2; // track contains originals + clones
+  var position = 0;            // current translateX (negative = scrolled left)
+  var velocity = reduceMotion ? 0 : 0.4; // px per frame (≈24px/s @60fps); 0 if reduced motion
+  var paused = false;
+  var resumeTimer = null;
+
+  function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
+
+  function frame() {
+    if (!paused && velocity !== 0) {
+      position -= velocity;
+      // wrap seamlessly: when we've scrolled one full half, snap back
+      if (-position >= halfWidth) position += halfWidth;
+      apply();
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  function cardStep() {
+    var card = track.querySelector('.audience-card');
+    return card ? card.getBoundingClientRect().width + 16 : 280;
+  }
+
+  function nudge(direction) {
+    position += direction * cardStep(); // direction: -1 = scroll left, +1 = scroll right
+    if (-position >= halfWidth) position += halfWidth;
+    if (position > 0) position -= halfWidth;
+    apply();
+    paused = true;
+    if (resumeTimer) clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() { paused = false; }, 1800);
+  }
+
+  if (leftBtn)  leftBtn.addEventListener('click',  function() { nudge(-1); });
+  if (rightBtn) rightBtn.addEventListener('click', function() { nudge(1); });
+
+  // Hover the marquee → pause
+  var marquee = track.parentElement;
+  if (marquee) {
+    marquee.addEventListener('mouseenter', function() { paused = true; });
+    marquee.addEventListener('mouseleave', function() { paused = false; });
+  }
 })();
 </script>
 

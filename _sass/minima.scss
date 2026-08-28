@@ -3023,10 +3023,7 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   display: flex;
   gap: 1.2rem;
   width: max-content;
-  // RTL direction + translate left = cards visually move right→left
-  animation: tnl-marquee-rtl 48s linear infinite;
-
-  &:hover { animation-play-state: paused; }
+  // Position is driven by JS (CSS transform updated each frame)
 
   > .audience-card {
     flex: 0 0 calc((100vw - 6rem) / 3);
@@ -3041,15 +3038,36 @@ $fln-accent:    #e07020;   // brand orange (single accent)
   }
 }
 
-@keyframes tnl-marquee-rtl {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+.tnl-marquee-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid $grey-color-light;
+  border-radius: 50%;
+  color: $text-color;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  opacity: 0.85;
+  transition: opacity 0.18s, background 0.18s, color 0.18s, border-color 0.18s;
+
+  i { font-size: 1rem; pointer-events: none; }
+
+  &:hover { opacity: 1; background: $brand-color; color: #fff; border-color: $brand-color; }
 }
+
+.tnl-marquee-arrow--left  { left: 0.6rem; }
+.tnl-marquee-arrow--right { right: 0.6rem; }
 
 // ── Reduced-motion respect ──
 @media (prefers-reduced-motion: reduce) {
   .tnl-adapter-marker { transition: none; }
   .tnl-adapter-band.is-active { animation: none; box-shadow: inset 0 0 0 2px $brand-color; }
   .tnl-feed.is-visible { animation: none; opacity: 0; }
-  .tnl-marquee-track { animation: none; }
 }
