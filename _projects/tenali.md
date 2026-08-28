@@ -421,87 +421,25 @@ function showTnlMode(id, btn) {
 
 ---
 
-## **The 91 Puzzles**
-
-Every puzzle type shares one contract — `GET /<type>-api/question` and `POST /<type>-api/check`. Send `{ solve: true }` in the POST body for a step-by-step explanation.
+## **Who It's For**
 
 <div class="audience-grid">
   <div class="audience-card">
-    <i class="ph ph-plus-circle audience-card-icon"></i>
-    <div class="audience-card-title">Arithmetic &amp; Number · 20</div>
-    <p class="audience-card-desc">Addition, Column ops, Decimals, Fractions, Indices, Surds, Sequences, Ratio, Percentages, Profit &amp; Loss, Banking, GST.</p>
+    <i class="ph ph-student audience-card-icon"></i>
+    <div class="audience-card-title">Learners</div>
+    <p class="audience-card-desc">The next question lands where the last one left you; the explanation is one tap away.</p>
   </div>
   <div class="audience-card">
-    <i class="ph ph-coins audience-card-icon"></i>
-    <div class="audience-card-title">Commerce &amp; Stats · 8</div>
-    <p class="audience-card-desc">Shares &amp; Dividends, Rounding, Standard Form, SDT, Number Bases, HCF &amp; LCM, Prime Factors, Bounds.</p>
+    <i class="ph ph-house-line audience-card-icon"></i>
+    <div class="audience-card-title">Parents</div>
+    <p class="audience-card-desc">See what your child practised, where bands sit, which topics still glow red.</p>
   </div>
   <div class="audience-card">
-    <i class="ph ph-function audience-card-icon"></i>
-    <div class="audience-card-title">Algebra · 15</div>
-    <p class="audience-card-desc">Variation, Linear &amp; Simultaneous, Quadratics, Polynomials, Remainder &amp; Binomial, Functions, plus MCQ gyms.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-shapes audience-card-icon"></i>
-    <div class="audience-card-title">Geometry &amp; Trig · 14</div>
-    <p class="audience-card-desc">Trig, Inverse Trig, Circular Measure, Inequalities, Coordinate Geometry, Probability, Sets, Bearings, Matrices.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-grid-four audience-card-icon"></i>
-    <div class="audience-card-title">Linear Algebra · 6</div>
-    <p class="audience-card-desc">LA Mission Quiz, Vectors, Dot Products, Transformations, Mensuration.</p>
-  </div>
-  <div class="audience-card">
-    <i class="ph ph-gamepad audience-card-icon"></i>
-    <div class="audience-card-title">Calculus &amp; Games · 15+</div>
-    <p class="audience-card-desc">Differentiation, Integration, Limits, Conics, Sudoku, Darts, Riddles, Curiosity, plus Vocabulary (7,662) and GK (991).</p>
+    <i class="ph ph-buildings audience-card-icon"></i>
+    <div class="audience-card-title">Schools &amp; Programmes</div>
+    <p class="audience-card-desc">Run a cohort — internship, summer school, numeracy intervention. Engagement signals without the surveillance.</p>
   </div>
 </div>
-
----
-
-## **Architecture**
-
-React 19 SPA, Express 5 + MongoDB, Socket.IO 4 for multiplayer, JWT auth. Frontend on Vite 8 with framer-motion, Three.js, mafs, face-api.js. One VPS, one Node process — every question is generated on the fly.
-
----
-
-## **In the Room**
-
-Tenali runs inside the platforms learners already use. No separate app, no extra login.
-
-<div class="scenario-tabs">
-  <div class="scenario-tab-bar">
-    <button class="scenario-tab active" onclick="showTnlRoom('learners', this)">Learners</button>
-    <button class="scenario-tab" onclick="showTnlRoom('parents', this)">Parents</button>
-    <button class="scenario-tab" onclick="showTnlRoom('schools', this)">Schools</button>
-  </div>
-
-  <div class="scenario-panel active" id="tnl-room-learners">
-    <div class="scenario-panel-head"><i class="ph ph-student scenario-icon"></i><span class="scenario-title">Learners</span></div>
-    <p>The next question lands where the last one left you; the explanation is one tap away.</p>
-    <span class="scenario-stat"><i class="ph ph-trend-up"></i> Practice that adjusts to you</span>
-  </div>
-  <div class="scenario-panel" id="tnl-room-parents">
-    <div class="scenario-panel-head"><i class="ph ph-house-line scenario-icon"></i><span class="scenario-title">Parents</span></div>
-    <p>See what your child practised, where bands sit, which topics still glow red. No login dance, no app to install.</p>
-    <span class="scenario-stat"><i class="ph ph-eye"></i> Effort made visible</span>
-  </div>
-  <div class="scenario-panel" id="tnl-room-schools">
-    <div class="scenario-panel-head"><i class="ph ph-buildings scenario-icon"></i><span class="scenario-title">Schools &amp; Programmes</span></div>
-    <p>Run a cohort — internship, summer school, numeracy intervention. Proctoring + leaderboards surface engagement without making it a competition.</p>
-    <span class="scenario-stat"><i class="ph ph-chart-bar"></i> Cohort-level signals</span>
-  </div>
-</div>
-
-<script>
-function showTnlRoom(id, btn) {
-  document.querySelectorAll('[id^="tnl-room-"]').forEach(function(p) { p.classList.remove('active'); });
-  document.querySelectorAll('.scenario-tab').forEach(function(t) { t.classList.remove('active'); });
-  document.getElementById('tnl-room-' + id).classList.add('active');
-  btn.classList.add('active');
-}
-</script>
 
 ---
 
