@@ -40,9 +40,9 @@ quote_author: "Said of Tenali Raman"
 
 ---
 
-## **The Adaptive Engine**
+## **About**
 
-Every question is calibrated to the learner. Watch the score shift — the next question lands where the last one left you.
+Every question is calibrated to the learner — the next one lands where the last one left you. Watch it work:
 
 <div class="tnl-demo" id="tnl-demo">
   <div class="tnl-demo-row">
@@ -165,15 +165,9 @@ Every question is calibrated to the learner. Watch the score shift — the next 
 })();
 </script>
 
----
+Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. Every question is generated on the fly — practice is infinite and never repeats. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.
 
-## **About**
-
-<div class="split-media">
-<p>Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. Every question is generated on the fly — practice is infinite and never repeats. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.</p>
-
-<img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px;">
-</div>
+<img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy" style="width:100%; border:1px solid #e2e2de; border-radius:6px; margin-top:1.5rem;">
 
 ---
 
