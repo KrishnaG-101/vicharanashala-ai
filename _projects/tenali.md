@@ -568,11 +568,10 @@ Eight ways to play. Same engine, different shape on top.
 
 <a class="contributor-more" href="https://github.com/vicharanashala/tenali/graphs/contributors" target="_blank" rel="noopener">See the full list on GitHub <i class="ph ph-arrow-right"></i></a>
 
----
-
-Step into the rhythm of math at [tenali.fun](https://tenali.fun){:target="_blank"}.
-
-<a href="https://github.com/vicharanashala/tenali" target="_blank" rel="noopener" class="product-github-card">
-  <i class="ph ph-github-logo"></i>
-  <span>View source on GitHub ↗</span>
-</a>
+<div class="tnl-closing">
+  <p class="tnl-closing-line">Step into the rhythm of math at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.</p>
+  <div class="tnl-closing-actions">
+    <a class="tnl-closing-btn tnl-closing-btn--primary" href="https://tenali.fun" target="_blank" rel="noopener"><i class="ph ph-play"></i> Try Tenali</a>
+    <a class="tnl-closing-btn tnl-closing-btn--ghost" href="https://github.com/vicharanashala/tenali" target="_blank" rel="noopener"><i class="ph ph-github-logo"></i> View source</a>
+  </div>
+</div>
