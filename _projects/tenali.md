@@ -34,43 +34,43 @@ quote_author: "Said of Tenali Raman"
   <a href="https://tenali.fun" target="_blank" rel="noopener" class="product-try-link">Try it now ↗</a>
 </div>
 
-<p class="product-page-tagline">Adaptive math practice with 69 puzzle types, live multiplayer, and step-by-step explanations.</p>
+<p class="product-page-tagline">Adaptive math practice featuring 69 puzzle types, live multiplayer, and step-by-step explanations.</p>
 
 ---
 
 ## **About**
 
-**Tenali** is named after the legendary **Tenali Raman** — the witty Indian scholar who outwitted entire courts with logic, not just facts. The platform sits on the same idea: math isn't memorised, it's *outwitted*.
+**Tenali** is named after the legendary **Tenali Raman**—the witty Indian scholar who outwitted entire courts with logic rather than just facts. The platform is built on this very idea: math isn't memorized; it's *outwitted*.
 
-Every question is calibrated to the learner — the next one lands where the last one left you.
+Every question is dynamically calibrated to the learner—the next one lands precisely where the last one left off.
 
-Tenali covers foundational numeracy through to algebra in a game-like structure that keeps learners invested. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.
+Tenali covers everything from foundational numeracy to advanced algebra in a game-like structure that keeps learners deeply invested. Live and free at <a href="https://tenali.fun" target="_blank" rel="noopener">tenali.fun</a>.
 
-**Why it works:** every question is generated on the fly from 91+ topics — arithmetic, geometry, algebra, calculus, vocab, GK — and there is no question database. Practice is infinite, never repeats, and the engine chooses the next question based on what the learner just showed they know. Difficulty isn't a setting; it's a per-learner trajectory.
+**Why it works:** Every question is generated on the fly from over 91 topics—including arithmetic, geometry, algebra, calculus, vocabulary, and general knowledge. Because there is no static question database, practice is truly infinite and never repeats. The engine chooses the next question based entirely on what the learner just demonstrated they know. Difficulty isn't a toggleable setting; it's a personalized, per-learner trajectory.
 
-A learner moves through four stages every session:
+A learner moves through four stages in every session:
 
 <div class="tnl-marquee tnl-marquee--4" id="tnl-workflow-marquee">
   <div class="tnl-marquee-track" id="tnl-workflow-track">
     <div class="audience-card">
       <i class="ph ph-globe audience-card-icon"></i>
       <div class="audience-card-title">1 · Open</div>
-      <p class="audience-card-desc">Land on the home grid at tenali.fun — 90+ colorful topic cards. Guest mode works fully; JWT login is optional.</p>
+      <p class="audience-card-desc">Land on the home grid at tenali.fun and browse 91+ colorful topic cards. Guest mode works fully; JWT login is optional.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-target audience-card-icon"></i>
       <div class="audience-card-title">2 · Pick</div>
-      <p class="audience-card-desc">Choose a mode: Goal Practice, Battle Arena, Detective Agency, Guided Journey, Random Mix, Custom Lesson, or a topic card.</p>
+      <p class="audience-card-desc">Choose from 8 distinct modes—like Goal Practice, Battle Arena, or Guided Journey—or dive straight into a topic card.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-play audience-card-icon"></i>
       <div class="audience-card-title">3 · Play</div>
-      <p class="audience-card-desc">20 adaptive questions. Correct bumps adaptScore; wrong drops it. Tap "Solve" at any time for a step-by-step walkthrough.</p>
+      <p class="audience-card-desc">Solve 20 adaptive questions. Correct answers increase your adaptScore; incorrect ones lower it. Tap "Solve" anytime for a step-by-step walkthrough.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-trophy audience-card-icon"></i>
       <div class="audience-card-title">4 · Earn</div>
-      <p class="audience-card-desc">Coins, XP, streak, badges. Progress saved in MongoDB — pick up tomorrow from where you stopped.</p>
+      <p class="audience-card-desc">Earn coins, XP, streaks, and badges. Progress is saved in MongoDB, so you can pick up tomorrow right where you left off.</p>
     </div>
   </div>
 </div>
@@ -111,7 +111,7 @@ A learner moves through four stages every session:
 })();
 </script>
 
-<img class="tnl-screenshot" src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 90+ topic cards color-coded by domain" loading="lazy">
+<img class="tnl-screenshot" src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 91+ topic cards color-coded by domain" loading="lazy">
 
 <script>
 (function() {
@@ -180,19 +180,19 @@ A learner moves through four stages every session:
 
 ## **The Problem**
 
-Math anxiety starts early and compounds. Most platforms gamify trivia — points, streaks, badges — without asking the real question: *is the next question the right one for this learner right now?*
+Math anxiety starts early and compounds over time. Most platforms simply gamify trivia—using points, streaks, and badges—without asking the fundamental question: *is this specific question the right one for this learner right now?*
 
 ---
 
 ## **What We Built**
 
-Pick a topic, get a question; the next one is calibrated to what you just showed you know. One engine runs across all 91+ puzzle topics — arithmetic, geometry, algebra, calculus, vocab, GK.
+Pick a topic, get a question; the next one is precisely calibrated to what you just demonstrated you know. A single engine powers all 91+ puzzle topics—spanning arithmetic, geometry, algebra, calculus, vocabulary, and general knowledge.
 
 <div class="shot-carousel" id="tenali-shot-carousel">
   <div class="shot-carousel-viewport">
 <div class="shot-slide active">
     <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid">
-    <figcaption>Home grid — 90+ topics, color-coded by domain.</figcaption>
+    <figcaption>Home grid — 91+ topics, color-coded by domain.</figcaption>
   </div>
   <div class="shot-slide">
     <img src="{{ site.baseurl }}/assets/images/tenali/goal-practice.png" alt="Tenali goal practice — Tables Desk">
@@ -262,62 +262,62 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
     <div class="audience-card">
       <i class="ph ph-chart-line-up audience-card-icon"></i>
       <div class="audience-card-title">Adaptive Difficulty</div>
-      <p class="audience-card-desc">A float adaptScore (0–3) shifts with every answer. Maps to bands easy → medium → hard → extrahard.</p>
+      <p class="audience-card-desc">A floating adaptScore (0–3) shifts with every answer. It seamlessly maps to difficulty bands: easy → medium → hard → extra-hard.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-swords audience-card-icon"></i>
       <div class="audience-card-title">Battle Arena</div>
-      <p class="audience-card-desc">Live 1v1 fastest-finger duels over Socket.IO. Same question, first correct answer wins.</p>
+      <p class="audience-card-desc">Live 1v1 fastest-finger duels over Socket.IO. Players get the same question, and the first correct answer wins.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-magnifying-glass audience-card-icon"></i>
       <div class="audience-card-title">Detective Agency</div>
-      <p class="audience-card-desc">Chain of math clues; solving one unlocks the next. Hundreds of procedurally generated cases.</p>
+      <p class="audience-card-desc">A chain of math clues where solving one unlocks the next. Explore hundreds of procedurally generated cases.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-graduation-cap audience-card-icon"></i>
       <div class="audience-card-title">Guided Journey</div>
-      <p class="audience-card-desc">Linear curriculum with concept checkpoints. Server enforces progression: locked → blue → bronze → silver → gold.</p>
+      <p class="audience-card-desc">A linear curriculum with concept checkpoints. Server enforces progression through ranks: locked → blue → bronze → silver → gold.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-flask audience-card-icon"></i>
       <div class="audience-card-title">Concept Lab</div>
-      <p class="audience-card-desc">5-stage mastery loop — Predict → Grid → Guided → Independent → Review.</p>
+      <p class="audience-card-desc">A dynamic 5-stage mastery loop: Predict → Grid → Guided → Independent → Review.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-puzzle-piece audience-card-icon"></i>
       <div class="audience-card-title">Spaced Repetition</div>
-      <p class="audience-card-desc">Recently-missed questions are promoted back into rotation by Bayesian Knowledge Tracing.</p>
+      <p class="audience-card-desc">Recently missed questions are automatically promoted back into rotation powered by Bayesian Knowledge Tracing (BKT).</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-shield-check audience-card-icon"></i>
       <div class="audience-card-title">Proctoring</div>
-      <p class="audience-card-desc">Optional exam-mode supervision via face-api.js — focus score, tab switches, look-aways.</p>
+      <p class="audience-card-desc">Optional exam-mode supervision via face-api.js—monitoring focus score, tab switches, and look-aways.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-trophy audience-card-icon"></i>
       <div class="audience-card-title">Gamification</div>
-      <p class="audience-card-desc">Coins, XP, streak, pinned badges, album-style Collections. Persisted across sessions.</p>
+      <p class="audience-card-desc">Collect coins, XP, streaks, and pinned badges. Build album-style Collections that persist across your sessions.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-shuffle audience-card-icon"></i>
       <div class="audience-card-title">Random Mix &amp; Custom Lesson</div>
-      <p class="audience-card-desc">Random Mix pulls from your weakest areas. Custom Lesson lets you pick exactly which topics and counts.</p>
+      <p class="audience-card-desc">Random Mix pulls heavily from your weakest areas. Custom Lesson lets you hand-pick exactly which topics and counts you want.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-terminal-window audience-card-icon"></i>
       <div class="audience-card-title">Code Playground</div>
-      <p class="audience-card-desc">Run code in 50+ languages. Python-Tutor-style visualizer with code + arrow + memory boxes.</p>
+      <p class="audience-card-desc">Run code in 50+ languages. Features a Python-Tutor-style visualizer with code, arrow pointers, and memory boxes.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-translate audience-card-icon"></i>
       <div class="audience-card-title">i18n &amp; RTL</div>
-      <p class="audience-card-desc">Built-in locale switching for multi-language classrooms, including right-to-left scripts.</p>
+      <p class="audience-card-desc">Built-in locale switching tailored for multi-language classrooms, with full support for right-to-left scripts.</p>
     </div>
     <div class="audience-card">
       <i class="ph ph-keyboard audience-card-icon"></i>
       <div class="audience-card-title">Accessibility</div>
-      <p class="audience-card-desc">Keyboard navigation, ARIA roles, high-contrast toggle, reduced-motion friendly animations.</p>
+      <p class="audience-card-desc">Fully accessible with keyboard navigation, ARIA roles, high-contrast toggles, and reduced-motion friendly animations.</p>
     </div>
   </div>
 </div>
@@ -385,7 +385,7 @@ Pick a topic, get a question; the next one is calibrated to what you just showed
 
 ## **Eight Modes at a Glance**
 
-Eight ways to play. Same engine, different shape on top.
+Eight distinct ways to play. Same underlying engine, beautifully different shapes on top.
 
 <div class="tnl-marquee tnl-marquee--2" id="tnl-modes-marquee">
   <button class="tnl-marquee-arrow tnl-marquee-arrow--left" id="tnl-modes-left" aria-label="Scroll modes left"><i class="ph ph-caret-left"></i></button>
@@ -394,49 +394,49 @@ Eight ways to play. Same engine, different shape on top.
     <div class="audience-card">
       <i class="ph ph-target audience-card-icon"></i>
       <div class="audience-card-title">Goal Practice</div>
-      <p class="audience-card-desc">Pick a target score on a topic and chase it. The engine adapts as you go.</p>
+      <p class="audience-card-desc">Pick a target score on a specific topic and chase it down. The engine adapts as you progress.</p>
       <span class="scenario-stat"><i class="ph ph-trend-up"></i> Hit your target or beat it</span>
     </div>
     <div class="audience-card">
       <i class="ph ph-swords audience-card-icon"></i>
       <div class="audience-card-title">Battle Arena</div>
-      <p class="audience-card-desc">Two players, one question, first correct answer wins. Streaks drive matchmaking.</p>
+      <p class="audience-card-desc">Two players, one question. First correct answer wins. Real-time streaks drive the matchmaking.</p>
       <span class="scenario-stat"><i class="ph ph-globe"></i> Multiplayer over Socket.IO</span>
     </div>
     <div class="audience-card">
       <i class="ph ph-magnifying-glass audience-card-icon"></i>
       <div class="audience-card-title">Detective Agency</div>
-      <p class="audience-card-desc">Chained math clues; solving one unlocks the next. Hundreds of cases, procedurally generated.</p>
+      <p class="audience-card-desc">A sequence of chained math clues; solving one unlocks the next. Hundreds of procedurally generated cases.</p>
       <span class="scenario-stat"><i class="ph ph-path"></i> Chained clue progression</span>
     </div>
     <div class="audience-card">
       <i class="ph ph-lightbulb audience-card-icon"></i>
       <div class="audience-card-title">Math Riddles</div>
-      <p class="audience-card-desc">Find the hidden rule. 48 riddles — find-rule, sequence, logic, image.</p>
+      <p class="audience-card-desc">Uncover the hidden rule. Explore 48 hand-authored riddles across find-rule, sequence, logic, and image formats.</p>
       <span class="scenario-stat"><i class="ph ph-shuffle"></i> 48 hand-authored riddles</span>
     </div>
     <div class="audience-card">
       <i class="ph ph-graduation-cap audience-card-icon"></i>
       <div class="audience-card-title">Guided Learning Journey</div>
-      <p class="audience-card-desc">Linear curriculum with concept checkpoints. Next concept unlocks only after mastery.</p>
+      <p class="audience-card-desc">A linear curriculum with defined concept checkpoints. The next concept unlocks only upon mastery.</p>
       <span class="scenario-stat"><i class="ph ph-lock-key"></i> Server-enforced progression</span>
     </div>
     <div class="audience-card">
       <i class="ph ph-shuffle audience-card-icon"></i>
       <div class="audience-card-title">Random Mix</div>
-      <p class="audience-card-desc">Pulls from wherever your adaptScore is lowest.</p>
+      <p class="audience-card-desc">Automatically pulls questions from wherever your adaptScore indicates you're weakest.</p>
       <span class="scenario-stat"><i class="ph ph-chart-line-up"></i> Targets weak areas</span>
     </div>
     <div class="audience-card">
       <i class="ph ph-sliders audience-card-icon"></i>
       <div class="audience-card-title">Custom Lesson</div>
-      <p class="audience-card-desc">Hand-pick topics and question counts.</p>
+      <p class="audience-card-desc">Take control by hand-picking exact topics and question counts for a customized session.</p>
       <span class="scenario-stat"><i class="ph ph-pencil"></i> You decide the mix</span>
     </div>
     <div class="audience-card">
       <i class="ph ph-function audience-card-icon"></i>
       <div class="audience-card-title">Linear Algebra Lab</div>
-      <p class="audience-card-desc">56 missions across 6 modules — ratios, coordinate geometry, linear transforms, matrices, determinants, PageRank.</p>
+      <p class="audience-card-desc">56 missions spread across 6 modules: ratios, coordinate geometry, linear transformations, matrices, determinants, and PageRank.</p>
       <span class="scenario-stat"><i class="ph ph-chart-network"></i> 6 modules · 4 difficulty bands</span>
     </div>
   </div>
