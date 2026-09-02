@@ -51,6 +51,8 @@ Tenali covers everything from foundational numeracy to advanced algebra in a gam
 A learner moves through four stages in every session:
 
 <div class="tnl-marquee tnl-marquee--4" id="tnl-workflow-marquee">
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--left" id="tnl-workflow-left" aria-label="Scroll workflow left"><i class="ph ph-caret-left"></i></button>
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--right" id="tnl-workflow-right" aria-label="Scroll workflow right"><i class="ph ph-caret-right"></i></button>
   <div class="tnl-marquee-track" id="tnl-workflow-track">
     <div class="audience-card">
       <i class="ph ph-globe audience-card-icon"></i>
@@ -74,42 +76,6 @@ A learner moves through four stages in every session:
     </div>
   </div>
 </div>
-
-<script>
-(function() {
-  var track = document.getElementById('tnl-workflow-track');
-  if (!track) return;
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Clone for seamless RTL loop
-  var originals = Array.prototype.slice.call(track.children);
-  originals.forEach(function(card) { track.appendChild(card.cloneNode(true)); });
-
-  var halfWidth = track.scrollWidth / 2;
-  var position = 0;                    // start at left edge
-  var velocity = reduceMotion ? 0 : 0.4;
-  var paused = false;
-
-  function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
-
-  function frame() {
-    if (!paused && velocity !== 0) {
-      position -= velocity;            // move LEFT (RTL)
-      if (-position >= halfWidth) position += halfWidth; // wrap
-      apply();
-    }
-    requestAnimationFrame(frame);
-  }
-  apply();
-  requestAnimationFrame(frame);
-
-  var marquee = track.parentElement;
-  if (marquee) {
-    marquee.addEventListener('mouseenter', function() { paused = true; });
-    marquee.addEventListener('mouseleave', function() { paused = false; });
-  }
-})();
-</script>
 
 <img class="tnl-screenshot" src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid — 91+ topic cards color-coded by domain" loading="lazy">
 
@@ -180,40 +146,40 @@ A learner moves through four stages in every session:
 
 ## **The Problem**
 
-Math anxiety starts early and compounds over time. Most platforms simply gamify trivia—using points, streaks, and badges—without asking the fundamental question: *is this specific question the right one for this learner right now?*
+Math anxiety is a cycle that starts early and compounds over time. Traditional learning platforms simply gamify trivia—using arbitrary points, streaks, and superficial badges—without ever asking the fundamental question: *Is this specific question the right one for this learner at this exact moment?* Endless repetitive practice doesn't build intuition; it just builds memory.
 
 ---
 
 ## **What We Built**
 
-Pick a topic, get a question; the next one is precisely calibrated to what you just demonstrated you know. A single engine powers all 91+ puzzle topics—spanning arithmetic, geometry, algebra, calculus, vocabulary, and general knowledge.
+Tenali flips the model. Pick a topic and get a question. The next question isn't pulled from a static list—it is precisely calibrated based on what you just demonstrated you know. A single, unified engine powers over 91 puzzle topics, spanning arithmetic, geometry, algebra, calculus, vocabulary, and general knowledge.
 
 <div class="shot-carousel" id="tenali-shot-carousel">
   <div class="shot-carousel-viewport">
-<div class="shot-slide active">
-    <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid">
-    <figcaption>Home grid — 91+ topics, color-coded by domain.</figcaption>
-  </div>
-  <div class="shot-slide">
-    <img src="{{ site.baseurl }}/assets/images/tenali/goal-practice.png" alt="Tenali goal practice — Tables Desk">
-    <figcaption>Goal practice — pick a target score, hit it before time runs out.</figcaption>
-  </div>
-  <div class="shot-slide">
-    <img src="{{ site.baseurl }}/assets/images/tenali/solve-explanation.png" alt="Tenali Tatsavit — Fit the Line">
-    <figcaption>Tatsavit — explore slope and intercept by feel.</figcaption>
-  </div>
-  <div class="shot-slide">
-    <img src="{{ site.baseurl }}/assets/images/tenali/battle-arena.png" alt="Tenali Battle Arena — live 1v1 duel">
-    <figcaption>Battle Arena — live 1v1 fastest-finger duels.</figcaption>
-  </div>
-  <div class="shot-slide">
-    <img src="{{ site.baseurl }}/assets/images/tenali/detective-agency.png" alt="Tenali Detective Agency — chained mystery">
-    <figcaption>Detective Agency — chained clues, procedurally generated.</figcaption>
-  </div>
-  <div class="shot-slide">
-    <img src="{{ site.baseurl }}/assets/images/tenali/guided-journey.png" alt="Tenali Guided Learning Journey">
-    <figcaption>Guided Journey — next concept unlocks only after mastery.</figcaption>
-  </div>
+    <div class="shot-slide active">
+      <img src="{{ site.baseurl }}/assets/images/tenali/home-grid.png" alt="Tenali home grid">
+      <figcaption>Home grid — 91+ topics, color-coded by domain.</figcaption>
+    </div>
+    <div class="shot-slide">
+      <img src="{{ site.baseurl }}/assets/images/tenali/goal-practice.png" alt="Tenali goal practice — Tables Desk">
+      <figcaption>Goal practice — pick a target score, hit it before time runs out.</figcaption>
+    </div>
+    <div class="shot-slide">
+      <img src="{{ site.baseurl }}/assets/images/tenali/solve-explanation.png" alt="Tenali Tatsavit — Fit the Line">
+      <figcaption>Tatsavit — explore slope and intercept by feel.</figcaption>
+    </div>
+    <div class="shot-slide">
+      <img src="{{ site.baseurl }}/assets/images/tenali/battle-arena.png" alt="Tenali Battle Arena — live 1v1 duel">
+      <figcaption>Battle Arena — live 1v1 fastest-finger duels.</figcaption>
+    </div>
+    <div class="shot-slide">
+      <img src="{{ site.baseurl }}/assets/images/tenali/detective-agency.png" alt="Tenali Detective Agency — chained mystery">
+      <figcaption>Detective Agency — chained clues, procedurally generated.</figcaption>
+    </div>
+    <div class="shot-slide">
+      <img src="{{ site.baseurl }}/assets/images/tenali/guided-journey.png" alt="Tenali Guided Learning Journey">
+      <figcaption>Guided Journey — next concept unlocks only after mastery.</figcaption>
+    </div>
     <button class="shot-carousel-arrow shot-carousel-prev" aria-label="Previous screen"><i class="ph ph-caret-left"></i></button>
     <button class="shot-carousel-arrow shot-carousel-next" aria-label="Next screen"><i class="ph ph-caret-right"></i></button>
   </div>
@@ -322,65 +288,6 @@ Pick a topic, get a question; the next one is precisely calibrated to what you j
   </div>
 </div>
 
-<script>
-(function() {
-  var track = document.getElementById('tnl-features-track');
-  var leftBtn = document.getElementById('tnl-features-left');
-  var rightBtn = document.getElementById('tnl-features-right');
-  if (!track) return;
-
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Clone once for seamless looping
-  var originals = Array.prototype.slice.call(track.children);
-  originals.forEach(function(card) { track.appendChild(card.cloneNode(true)); });
-
-  var halfWidth = track.scrollWidth / 2; // track contains originals + clones
-  var position = 0;            // current translateX (negative = scrolled left)
-  var velocity = reduceMotion ? 0 : 0.4; // px per frame (≈24px/s @60fps); 0 if reduced motion
-  var paused = false;
-  var resumeTimer = null;
-
-  function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
-
-  function frame() {
-    if (!paused && velocity !== 0) {
-      position -= velocity;
-      // wrap seamlessly: when we've scrolled one full half, snap back
-      if (-position >= halfWidth) position += halfWidth;
-      apply();
-    }
-    requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
-
-  function cardStep() {
-    var card = track.querySelector('.audience-card');
-    return card ? card.getBoundingClientRect().width + 16 : 280;
-  }
-
-  function nudge(direction) {
-    position += direction * cardStep(); // direction: -1 = scroll left, +1 = scroll right
-    if (-position >= halfWidth) position += halfWidth;
-    if (position > 0) position -= halfWidth;
-    apply();
-    paused = true;
-    if (resumeTimer) clearTimeout(resumeTimer);
-    resumeTimer = setTimeout(function() { paused = false; }, 1800);
-  }
-
-  if (leftBtn)  leftBtn.addEventListener('click',  function() { nudge(-1); });
-  if (rightBtn) rightBtn.addEventListener('click', function() { nudge(1); });
-
-  // Hover the marquee → pause
-  var marquee = track.parentElement;
-  if (marquee) {
-    marquee.addEventListener('mouseenter', function() { paused = true; });
-    marquee.addEventListener('mouseleave', function() { paused = false; });
-  }
-})();
-</script>
-
 ---
 
 ## **Eight Modes at a Glance**
@@ -442,63 +349,6 @@ Eight distinct ways to play. Same underlying engine, beautifully different shape
   </div>
 </div>
 
-<script>
-(function() {
-  var track = document.getElementById('tnl-modes-track');
-  var leftBtn = document.getElementById('tnl-modes-left');
-  var rightBtn = document.getElementById('tnl-modes-right');
-  if (!track) return;
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Clone for seamless RTL loop
-  var originals = Array.prototype.slice.call(track.children);
-  originals.forEach(function(card) { track.appendChild(card.cloneNode(true)); });
-
-  var halfWidth = track.scrollWidth / 2;
-  var position = 0;
-  var velocity = reduceMotion ? 0 : 0.4;
-  var paused = false;
-  var resumeTimer = null;
-
-  function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
-
-  function frame() {
-    if (!paused && velocity !== 0) {
-      position -= velocity; // RTL
-      if (-position >= halfWidth) position += halfWidth;
-      apply();
-    }
-    requestAnimationFrame(frame);
-  }
-  apply();
-  requestAnimationFrame(frame);
-
-  function cardStep() {
-    var card = track.querySelector('.audience-card');
-    return card ? card.getBoundingClientRect().width + 16 : 320;
-  }
-
-  function nudge(direction) {
-    position += direction * cardStep(); // direction: -1 = scroll left, +1 = scroll right
-    if (-position >= halfWidth) position += halfWidth;
-    if (position > 0) position -= halfWidth;
-    apply();
-    paused = true;
-    if (resumeTimer) clearTimeout(resumeTimer);
-    resumeTimer = setTimeout(function() { paused = false; }, 1800);
-  }
-
-  if (leftBtn)  leftBtn.addEventListener('click',  function() { nudge(-1); });
-  if (rightBtn) rightBtn.addEventListener('click', function() { nudge(1); });
-
-  var marquee = track.parentElement;
-  if (marquee) {
-    marquee.addEventListener('mouseenter', function() { paused = true; });
-    marquee.addEventListener('mouseleave', function() { paused = false; });
-  }
-})();
-</script>
-
 ---
 
 ## **By the Numbers**
@@ -556,78 +406,44 @@ Eight distinct ways to play. Same underlying engine, beautifully different shape
 <div class="tnl-core-team">
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials">SR</span>
-      <img data-fallbacks="https://avatars.githubusercontent.com/sudarshansudarshan?v=4&size=200|https://ui-avatars.com/api/?name=S+R+S+Iyengar&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/sudarshan-iyengar-3560b8145?fallback=false" alt="S. R. S. Iyengar" loading="lazy">
+      <span class="tnl-core-initials" style="display: flex;">SR</span>
     </div>
     <div class="tnl-core-name">S. R. S. Iyengar</div>
     <div class="tnl-core-role">Owner</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials">JG</span>
-      <img data-fallbacks="https://unavatar.io/linkedin/jinal-gupta-220a652b6|https://avatars.githubusercontent.com/jgupta05072003-code?v=4&size=200|https://ui-avatars.com/api/?name=Jinal+Gupta&size=200&background=e07020&color=fff&bold=true" src="https://media.licdn.com/dms/image/v2/D4E03AQFMNHT1AN-KMw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727588992014?e=1789603200&v=beta&t=bvnvOgNxqEDWxyGAxqUMjG_rcY0WzPhURL-ayVWH114" alt="Jinal Gupta" loading="lazy">
+      <span class="tnl-core-initials" style="display: flex;">JG</span>
     </div>
     <div class="tnl-core-name">Jinal Gupta</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials">SH</span>
-      <img data-fallbacks="https://avatars.githubusercontent.com/S-Hamsalekha-annamai?v=4&size=200|https://ui-avatars.com/api/?name=S+Hamsalekha&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/hamsalekha-s-a88ab59a?fallback=false" alt="S. Hamsalekha" loading="lazy">
+      <span class="tnl-core-initials" style="display: flex;">SH</span>
     </div>
     <div class="tnl-core-name">S. Hamsalekha</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials">MA</span>
-      <img data-fallbacks="https://avatars.githubusercontent.com/muditagrawal2007?v=4&size=200|https://ui-avatars.com/api/?name=Mudit+Agrawal&size=200&background=e07020&color=fff&bold=true" src="https://unavatar.io/linkedin/mudit-agrawal-16929337a?fallback=false" alt="Mudit Agrawal" loading="lazy">
+      <span class="tnl-core-initials" style="display: flex;">MA</span>
     </div>
     <div class="tnl-core-name">Mudit Agrawal</div>
     <div class="tnl-core-role">Maintainer</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials">KG</span>
-      <img data-fallbacks="https://unavatar.io/linkedin/krishna-gelra|https://avatars.githubusercontent.com/KrishnaG-101?v=4&size=200|https://ui-avatars.com/api/?name=Krishna+Gelra&size=200&background=e07020&color=fff&bold=true" src="https://media.licdn.com/dms/image/v2/D4D35AQFyeM4p9if0Eg/profile-framedphoto-shrink_800_800/B4DZZ4BQRQGgAk-/0/1745770317186?e=1788537600&v=beta&t=WK1uo-OzLozpQDxPtK6_V6ZkOv47zcP0Zjely6PjW8s" alt="Krishna Gelra" loading="lazy">
+      <span class="tnl-core-initials" style="display: flex;">KG</span>
     </div>
     <div class="tnl-core-name">Krishna Gelra</div>
     <div class="tnl-core-role">Maintainer</div>
   </div>
 </div>
 
-<script>
-(function() {
-  // Walk through fallback URLs on each core-team avatar img until one loads
-  document.querySelectorAll('.tnl-core-avatar img').forEach(function(img) {
-    var initials = img.previousElementSibling;
-    function tryNext() {
-      var fb = (img.dataset.fallbacks || '').split('|').filter(Boolean);
-      if (!fb.length) { initials.style.display = ''; return; }
-      var next = fb.shift();
-      img.dataset.fallbacks = fb.join('|');
-      img.src = next;
-    }
-    img.addEventListener('error', function() {
-      var fb = (img.dataset.fallbacks || '').split('|').filter(Boolean);
-      if (fb.length) {
-        tryNext();
-      } else {
-        // All fallbacks exhausted — remove the img so initials show
-        img.remove();
-      }
-    });
-    img.addEventListener('load', function() {
-      // Loaded successfully — hide initials underneath
-      if (initials && initials.classList.contains('tnl-core-initials')) {
-        initials.style.display = 'none';
-      }
-    });
-  });
-})();
-</script>
-
 <div class="tnl-marquee tnl-contrib-marquee" id="tnl-contrib-marquee">
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--left" id="tnl-contrib-left" aria-label="Scroll contributors left"><i class="ph ph-caret-left"></i></button>
+  <button class="tnl-marquee-arrow tnl-marquee-arrow--right" id="tnl-contrib-right" aria-label="Scroll contributors right"><i class="ph ph-caret-right"></i></button>
   <div class="tnl-marquee-track" id="tnl-contrib-track">
     <span class="contributor-chip tnl-contrib-chip">Lakshmi Varshini Nandula</span>
     <span class="contributor-chip tnl-contrib-chip">Sameer Mishra</span>
@@ -651,38 +467,89 @@ Eight distinct ways to play. Same underlying engine, beautifully different shape
 </div>
 
 <script>
+// Refactored unified Smooth Scrolling Marquee logic
 (function() {
-  var track = document.getElementById('tnl-contrib-track');
-  if (!track) return;
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function initMarquee(trackId, leftBtnId, rightBtnId, itemSelector) {
+    var track = document.getElementById(trackId);
+    var leftBtn = document.getElementById(leftBtnId);
+    var rightBtn = document.getElementById(rightBtnId);
+    if (!track) return;
 
-  // Clone for seamless RTL loop
-  var originals = Array.prototype.slice.call(track.children);
-  originals.forEach(function(c) { track.appendChild(c.cloneNode(true)); });
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var halfWidth = track.scrollWidth / 2;
-  var position = 0;
-  var velocity = reduceMotion ? 0 : 0.4;
-  var paused = false;
+    // Clone once for seamless looping
+    var originals = Array.prototype.slice.call(track.children);
+    originals.forEach(function(el) { track.appendChild(el.cloneNode(true)); });
 
-  function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
+    var halfWidth = track.scrollWidth / 2;
+    var position = 0;
+    var targetPosition = 0;
+    var velocity = reduceMotion ? 0 : 0.4;
+    var paused = false;
+    var isNudging = false;
+    var resumeTimer = null;
 
-  function frame() {
-    if (!paused && velocity !== 0) {
-      position -= velocity; // RTL
-      if (-position >= halfWidth) position += halfWidth;
-      apply();
+    function apply() { track.style.transform = 'translate3d(' + position + 'px, 0, 0)'; }
+
+    function frame() {
+      if (isNudging) {
+        // Smooth lerp (ease-out) for manual non-glitchy scrolling
+        position += (targetPosition - position) * 0.12; 
+        if (Math.abs(targetPosition - position) < 0.5) {
+          position = targetPosition;
+          isNudging = false;
+        }
+        
+        // Wrap seamlessly if we cross the loop boundary
+        if (-position >= halfWidth) {
+          position += halfWidth;
+          targetPosition += halfWidth;
+        } else if (position > 0) {
+          position -= halfWidth;
+          targetPosition -= halfWidth;
+        }
+        apply();
+      } else if (!paused && velocity !== 0) {
+        position -= velocity;
+        if (-position >= halfWidth) position += halfWidth;
+        targetPosition = position; // Keep target in sync with auto-scroll
+        apply();
+      }
+      requestAnimationFrame(frame);
     }
+    apply();
     requestAnimationFrame(frame);
-  }
-  apply();
-  requestAnimationFrame(frame);
 
-  var marquee = track.parentElement;
-  if (marquee) {
-    marquee.addEventListener('mouseenter', function() { paused = true; });
-    marquee.addEventListener('mouseleave', function() { paused = false; });
+    function getStep() {
+      if (itemSelector === '.tnl-contrib-chip') return 250; // Fixed scroll for chips
+      var item = track.querySelector(itemSelector);
+      return item ? item.getBoundingClientRect().width + 16 : 280;
+    }
+
+    function nudge(direction) {
+      if (!isNudging) targetPosition = position;
+      targetPosition += direction * getStep();
+      isNudging = true;
+      paused = true;
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function() { paused = false; }, 2000);
+    }
+
+    if (leftBtn)  leftBtn.addEventListener('click',  function() { nudge(-1); });
+    if (rightBtn) rightBtn.addEventListener('click', function() { nudge(1); });
+
+    var marquee = track.parentElement;
+    if (marquee) {
+      marquee.addEventListener('mouseenter', function() { paused = true; });
+      marquee.addEventListener('mouseleave', function() { paused = false; });
+    }
   }
+
+  // Initialize all marquees with the new smooth engine
+  initMarquee('tnl-workflow-track', 'tnl-workflow-left', 'tnl-workflow-right', '.audience-card');
+  initMarquee('tnl-features-track', 'tnl-features-left', 'tnl-features-right', '.audience-card');
+  initMarquee('tnl-modes-track', 'tnl-modes-left', 'tnl-modes-right', '.audience-card');
+  initMarquee('tnl-contrib-track', 'tnl-contrib-left', 'tnl-contrib-right', '.tnl-contrib-chip');
 })();
 </script>
 
