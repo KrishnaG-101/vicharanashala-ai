@@ -26,6 +26,8 @@
 
       <div class="trigger">
 
+        <a class="page-link{% if page.url == '/' or page.url == '/index.html' %} nav-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+
         <div class="dropdown">
           <a href="#" class="dropbtn{% if page.url contains 'ourstory' or page.url contains 'team' %} nav-active{% endif %}">About</a>
           <div class="dropdown-content">
