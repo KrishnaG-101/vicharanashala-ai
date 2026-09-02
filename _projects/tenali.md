@@ -406,40 +406,60 @@ Eight distinct ways to play. Same underlying engine, beautifully different shape
 <div class="tnl-core-team">
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials" style="display: flex;">SR</span>
+      <span class="tnl-core-initials">SR</span>
+      <img src="{{ site.baseurl }}/assets/images/team/s-r-s-iyengar.jpg" alt="S. R. S. Iyengar" loading="lazy">
     </div>
     <div class="tnl-core-name">S. R. S. Iyengar</div>
     <div class="tnl-core-role">Owner</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials" style="display: flex;">JG</span>
+      <span class="tnl-core-initials">JG</span>
+      <img src="{{ site.baseurl }}/assets/images/team/jinal-gupta.jpg" alt="Jinal Gupta" loading="lazy">
     </div>
     <div class="tnl-core-name">Jinal Gupta</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials" style="display: flex;">SH</span>
+      <span class="tnl-core-initials">SH</span>
+      <img src="{{ site.baseurl }}/assets/images/team/s-hamsalekha.jpg" alt="S. Hamsalekha" loading="lazy">
     </div>
     <div class="tnl-core-name">S. Hamsalekha</div>
     <div class="tnl-core-role">Mentor · Maintainer</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials" style="display: flex;">MA</span>
+      <span class="tnl-core-initials">MA</span>
+      <img src="{{ site.baseurl }}/assets/images/team/mudit-agrawal.jpg" alt="Mudit Agrawal" loading="lazy">
     </div>
     <div class="tnl-core-name">Mudit Agrawal</div>
     <div class="tnl-core-role">Maintainer</div>
   </div>
   <div class="tnl-core-card">
     <div class="tnl-core-avatar">
-      <span class="tnl-core-initials" style="display: flex;">KG</span>
+      <span class="tnl-core-initials">KG</span>
+      <img src="{{ site.baseurl }}/assets/images/team/krishna-gelra.jpg" alt="Krishna Gelra" loading="lazy">
     </div>
     <div class="tnl-core-name">Krishna Gelra</div>
     <div class="tnl-core-role">Maintainer</div>
   </div>
 </div>
+
+<script>
+(function() {
+  document.querySelectorAll('.tnl-core-avatar img').forEach(function(img) {
+    var initials = img.previousElementSibling;
+    img.addEventListener('error', function() {
+      img.style.display = 'none';
+      if (initials) initials.style.display = 'flex';
+    });
+    img.addEventListener('load', function() {
+      if (initials) initials.style.display = 'none';
+    });
+  });
+})();
+</script>
 
 <div class="tnl-marquee tnl-contrib-marquee" id="tnl-contrib-marquee">
   <button class="tnl-marquee-arrow tnl-marquee-arrow--left" id="tnl-contrib-left" aria-label="Scroll contributors left"><i class="ph ph-caret-left"></i></button>
